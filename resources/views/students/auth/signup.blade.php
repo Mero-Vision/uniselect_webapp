@@ -39,7 +39,8 @@
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="row justify-content-center align-items-center vh-100 overflow-auto flex-wrap ">
                             <div class="col-md-8 mx-auto p-4">
-                                <form action="index.html">
+                                <form action="{{ url('sign-up') }}" method="POST">
+                                    @csrf
                                     <div>
                                         <div class=" mx-auto mb-5 text-center">
                                             <img src="{{ url('assets/login/img/logo.png') }}" class="img-fluid"
@@ -62,30 +63,52 @@
                                                     <span class="span-or">Or</span>
                                                 </div>
                                                 <div class="mb-3 ">
+
+
                                                     <label class="form-label">Name</label>
                                                     <div class="input-icon mb-3 position-relative">
                                                         <span class="input-icon-addon">
                                                             <i class="ti ti-user"></i>
                                                         </span>
-                                                        <input type="text" value="" class="form-control">
+                                                        <input type="text" class="form-control" name="name"
+                                                            value="{{ old('name') }}">
+                                                        @error('name')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
                                                     </div>
+
+
                                                     <label class="form-label">Email Address</label>
                                                     <div class="input-icon mb-3 position-relative">
                                                         <span class="input-icon-addon">
                                                             <i class="ti ti-mail"></i>
                                                         </span>
-                                                        <input type="text" value="" class="form-control">
+                                                        <input type="text" class="form-control" name="email"
+                                                        value="{{ old('email') }}">
+                                                        @error('email')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
                                                     </div>
+
+
                                                     <label class="form-label">Password</label>
                                                     <div class="pass-group mb-3">
-                                                        <input type="password" class="pass-input form-control">
+                                                        <input type="password" class="pass-input form-control" id="password" name="password">
                                                         <span class="ti toggle-password ti-eye-off"></span>
+                                                        @error('password')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
                                                     </div>
+
                                                     <label class="form-label">Confirm Password</label>
                                                     <div class="pass-group">
-                                                        <input type="password" class="pass-input form-control">
+                                                        <input type="password" class="pass-input form-control" id="password_confirmation" name="password_confirmation">
                                                         <span class="ti toggle-password ti-eye-off"></span>
+                                                        @error('password_confirmation')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
                                                     </div>
+
                                                 </div>
 
 
@@ -95,7 +118,7 @@
                                                 </div>
                                                 <div class="text-center">
                                                     <h6 class="fw-normal text-dark mb-0">Already have an account?<a
-                                                            href="{{url('/')}}" class="hover-a "> Sign In</a>
+                                                            href="{{ url('/') }}" class="hover-a "> Sign In</a>
                                                     </h6>
                                                 </div>
                                             </div>
