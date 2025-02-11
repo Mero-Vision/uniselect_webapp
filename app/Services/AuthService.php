@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Services;
 
@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 use App\Models\User;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
 
 class AuthService
@@ -36,15 +37,13 @@ class AuthService
                     // Regenerate session ID to prevent session fixation attacks
                     request()->session()->regenerate();
 
-                    // Log successful login
-                    Log::info('User logged in successfully.', ['user_id' => $user->id, 'email' => $user->email]);
-
+                    sweetalert()->success('Welcome ' . $user->name);
                     return redirect()->intended('student/home');
                 } else {
-                    
-                    return back()->with('warning','Unauthorized access attempt.', ['email' => $credentials['email']]);
-                    
-                    Auth::logout(); 
+
+                    return back()->with('warning', 'Unauthorized access attempt.', ['email' => $credentials['email']]);
+
+                    Auth::logout();
                     throw ValidationException::withMessages([
                         'email' => 'You do not have permission to access this area.',
                     ]);
@@ -55,13 +54,12 @@ class AuthService
                 RateLimiter::hit($this->throttleKey($credentials['email']));
 
                 return back()->with('warning', 'Invalid email or password. Please try again.');
-
             }
         } catch (\Throwable $th) {
-           
+
             Log::error('Login error.', ['error' => $th->getMessage(), 'email' => $credentials['email']]);
 
-            throw $th; 
+            throw $th;
         }
     }
 
@@ -90,5 +88,24 @@ class AuthService
     protected function throttleKey(string $email): string
     {
         return Str::lower($email) . '|' . request()->ip();
+    }
+
+
+    public function logout(): void
+    {
+        $user = Auth::user();
+
+        if ($user) {
+            Auth::logout();
+
+            // Invalidate the session to prevent session fixation attacks
+            request()->session()->invalidate();
+
+            // Regenerate the CSRF token
+            request()->session()->regenerateToken();
+
+            // Clear cached data for the user
+            Cache::forget('user_data_' . $user->id);
+        }
     }
 }

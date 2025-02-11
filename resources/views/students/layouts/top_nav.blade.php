@@ -38,7 +38,7 @@
                     <a href="https://product.geniusocean.com/genius-wallet/user/support/tickets"
                         class="dropdown-item">Support Ticket</a>
                     <div class="dropdown-divider"></div>
-                    <a href="https://product.geniusocean.com/genius-wallet/user/logout" class="dropdown-item">Logout</a>
+                    <a href="{{url('student/logout')}}" class="dropdown-item">Logout</a>
                 </div>
             </div>
 
