@@ -9,3 +9,7 @@ Route::get('sign-up',[AuthController::class,'signUp']);
 Route::post('sign-up',[AuthController::class,'signUpStore']);
 
 
+Route::middleware(['auth'])->group(function () {
+
+
+});

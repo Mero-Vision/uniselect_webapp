@@ -39,7 +39,7 @@ class AuthService
                     // Log successful login
                     Log::info('User logged in successfully.', ['user_id' => $user->id, 'email' => $user->email]);
 
-                    return redirect()->intended('dashboard');
+                    return redirect()->intended('student/home');
                 } else {
                     
                     return back()->with('warning','Unauthorized access attempt.', ['email' => $credentials['email']]);
