@@ -39,7 +39,8 @@
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="row justify-content-center align-items-center vh-100 overflow-auto flex-wrap ">
                             <div class="col-md-8 mx-auto p-4">
-                                <form action="index.html">
+                                <form action="{{ url('login') }}" method="POST">
+                                    @csrf
                                     <div>
                                         <div class=" mx-auto mb-5 text-center">
                                             <img src="{{ url('assets/login/img/logo.png') }}" class="img-fluid"
@@ -67,12 +68,18 @@
                                                         <span class="input-icon-addon">
                                                             <i class="ti ti-mail"></i>
                                                         </span>
-                                                        <input type="text" value="" class="form-control">
+                                                        <input type="text" class="form-control" name="email">
+                                                        @error('email')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
                                                     </div>
                                                     <label class="form-label">Password</label>
                                                     <div class="pass-group">
-                                                        <input type="password" class="pass-input form-control">
+                                                        <input type="password" class="pass-input form-control" name="password">
                                                         <span class="ti toggle-password ti-eye-off"></span>
+                                                        @error('password')
+                                                        <p class="text-danger">{{ $message }}</p>
+                                                    @enderror
                                                     </div>
                                                 </div>
 
