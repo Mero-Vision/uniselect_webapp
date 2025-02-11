@@ -9,7 +9,7 @@
     <meta name="author" content="Dreams technologies - Bootstrap Admin Template">
     <meta name="robots" content="noindex, nofollow">
     <title>Customer Login</title>
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url('assets/login/img/logo.png') }}">
     <link rel="stylesheet" href="{{ url('assets/login/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url('assets/login/css/feather.css') }}">
     <link rel="stylesheet" href="{{ url('assets/login/css/tabler-icons.css') }}">
@@ -53,7 +53,7 @@
                                                 </div>
 
                                                 <div class="text-center">
-                                                    <h6 class="fw-normal text-dark mb-0"><a href="register-2.html"
+                                                    <h6 class="fw-normal text-dark mb-0"><a href=""
                                                             class="hover-a "> Admin Login</a>
                                                     </h6>
                                                 </div>
@@ -84,8 +84,8 @@
                                                         <p class="ms-1 mb-0 ">Remember Me</p>
                                                     </div>
                                                     <div class="text-end ">
-                                                        <a href="forgot-password.html" class="link-danger">Forgot
-                                                            Password?</a>
+                                                        {{-- <a href="forgot-password.html" class="link-danger">Forgot
+                                                            Password?</a> --}}
                                                     </div>
                                                 </div>
                                                 <div class="mb-3">
@@ -94,7 +94,7 @@
                                                 </div>
                                                 <div class="text-center">
                                                     <h6 class="fw-normal text-dark mb-0">Don’t have an account? <a
-                                                            href="register-2.html" class="hover-a "> Create
+                                                            href="{{ url('sign-up') }}" class="hover-a "> Create
                                                             Account</a>
                                                     </h6>
                                                 </div>
