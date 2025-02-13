@@ -49,13 +49,13 @@
                                         <div class="card">
                                             <div class="card-body p-4">
                                                 <div class=" mb-4">
-                                                    <h2 class="mb-2 text-center">Welcome to Student Portal</h2>
+                                                    <h2 class="mb-2 text-center">Welcome to Admin Portal</h2>
                                                     <p class="mb-0 text-center">Please enter your details to sign in</p>
                                                 </div>
 
                                                 <div class="text-center">
-                                                    <h6 class="fw-normal text-dark mb-0"><a href="{{url('admin/login')}}"
-                                                            class="hover-a "> Admin Login</a>
+                                                    <h6 class="fw-normal text-dark mb-0"><a href="{{url('/')}}"
+                                                            class="hover-a "> Student Login</a>
                                                     </h6>
                                                 </div>
 
