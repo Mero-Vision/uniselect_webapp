@@ -9,10 +9,7 @@
     
   
     
-    document.addEventListener("DOMContentLoaded", function() {
-        $(".main-wrapper").append(themesettings)
-    });
-    
+   
     document.addEventListener("DOMContentLoaded", function(event) {
         const darkModeToggle = document.getElementById('dark-mode-toggle');
         const lightModeToggle = document.getElementById('light-mode-toggle');
@@ -146,7 +143,6 @@
         layoutRadios.forEach(radio => radio.addEventListener('change', handleInputChange));
         topbarRadios.forEach(radio => radio.addEventListener('change', handleInputChange));
         sidebarBgRadios.forEach(radio => radio.addEventListener('change', handleSidebarBgChange));
-        resetButton.addEventListener('click', resetThemeAndSidebarThemeAndColorAndBg);
 
         // Initial setup from localStorage
         const savedTheme = localStorage.getItem('theme') || 'light';

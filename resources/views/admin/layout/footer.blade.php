@@ -1,14 +1,14 @@
-<script src="{{url('assets/admin/js/jquery-3.7.1.min.js')}}"></script>
-<script src="{{url('assets/admin/js/bootstrap.bundle.min.js')}}"></script>
-<script src="{{url('assets/admin/js/feather.min.js')}}"></script>
+<script src="{{ url('assets/admin/js/jquery-3.7.1.min.js') }}"></script>
+<script src="{{ url('assets/admin/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ url('assets/admin/js/moment.js') }}"></script>
 <script src="{{ url('assets/admin/js/daterangepicker.js') }}"></script>
 <script src="{{ url('assets/admin/js/bootstrap-datetimepicker.min.js') }}"></script>
-<script src="{{url('assets/admin/js/jquery.slimscroll.min.js')}}" type="61fe09eaf1aaca2bbff735d6-text/javascript"></script>
-<script src="{{url('assets/admin/js/select2.min.js')}}" type="61fe09eaf1aaca2bbff735d6-text/javascript"></script>
+<script src="{{ url('assets/admin/js/feather.min.js') }}"></script>
+<script src="{{url('assets/admin/js/jquery.slimscroll.min.js')}}"></script>
 <script src="{{ url('assets/admin/js/apexcharts.min.js') }}"></script>
 <script src="{{ url('assets/admin/js/chart-data.js') }}"></script>
+<script src="{{url('assets/admin/js/owl.carousel.min.js')}}"></script>
+<script src="{{url('assets/admin/js/select2.min.js')}}"></script>
 <script src="{{ url('assets/admin/js/jquery.counterup.min.js') }}"></script>
 <script src="{{ url('assets/admin/js/jquery.waypoints.min.js') }}"></script>
 <script src="{{ url('assets/admin/js/script.js') }}"></script>
-

@@ -64,9 +64,9 @@
                                 role="alert">
                                 <div class="d-flex align-items-center">
                                     <span class="me-1 avatar avatar-sm flex-shrink-0"><img
-                                            src="assets/img/profiles/avatar-27.jpg" alt="Img"
+                                            src="{{ Avatar::create(auth()->user()->name)->toBase64() }}" alt="Img"
                                             class="img-fluid rounded-circle"></span>
-                                    <p>Fahed III,C has paid Fees for the <strong class="mx-1">“Term1”</strong></p>
+                                    <p> {{Auth::user()->name}}, C has paid Fees for the <strong class="mx-1">“Term1”</strong></p>
                                 </div>
                                 <button type="button" class="btn-close p-0" data-bs-dismiss="alert"
                                     aria-label="Close"><span><i class="ti ti-x"></i></span></button>
@@ -86,7 +86,7 @@
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="avatar avatar-xl bg-danger-transparent me-2 p-1">
-                                        <img src="assets/img/icons/student.svg" alt="img">
+                                        <img src="{{url('assets/admin/img/student.svg')}}" alt="img">
                                     </div>
                                     <div class="overflow-hidden flex-fill">
                                         <div class="d-flex align-items-center justify-content-between">
@@ -112,14 +112,14 @@
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="avatar avatar-xl me-2 bg-secondary-transparent p-1">
-                                        <img src="assets/img/icons/teacher.svg" alt="img">
+                                        <img src="{{url('assets/admin/img/university.svg')}}" alt="img">
                                     </div>
                                     <div class="overflow-hidden flex-fill">
                                         <div class="d-flex align-items-center justify-content-between">
                                             <h2 class="counter">284</h2>
                                             <span class="badge bg-skyblue">1.2%</span>
                                         </div>
-                                        <p>Total Teachers</p>
+                                        <p>Total University</p>
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center justify-content-between border-top mt-3 pt-3">
@@ -138,14 +138,14 @@
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="avatar avatar-xl me-2 bg-warning-transparent p-1">
-                                        <img src="assets/img/icons/staff.svg" alt="img">
+                                        <img src="{{url('assets/admin/img/course.svg')}}" alt="img">
                                     </div>
                                     <div class="overflow-hidden flex-fill">
                                         <div class="d-flex align-items-center justify-content-between">
                                             <h2 class="counter">162</h2>
                                             <span class="badge bg-warning">1.2%</span>
                                         </div>
-                                        <p>Total Staff</p>
+                                        <p>Total Courses</p>
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center justify-content-between border-top mt-3 pt-3">
@@ -164,14 +164,14 @@
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="avatar avatar-xl me-2 bg-success-transparent p-1">
-                                        <img src="assets/img/icons/subject.svg" alt="img">
+                                        <img src="{{url('assets/admin/img/application.svg')}}" alt="img">
                                     </div>
                                     <div class="overflow-hidden flex-fill">
                                         <div class="d-flex align-items-center justify-content-between">
                                             <h2 class="counter">82</h2>
                                             <span class="badge bg-success">1.2%</span>
                                         </div>
-                                        <p>Total Subjects</p>
+                                        <p>Total Applications</p>
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center justify-content-between border-top mt-3 pt-3">
@@ -280,127 +280,22 @@
 
                 </div>
 
+                
+
+
+
+
+
+
 
             </div>
 
         </div>
         <!-- /Page Wrapper -->
 
-        <!-- Add Class Routine -->
-        <div class="modal fade" id="add_class_routine">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-wrapper">
-                        <div class="modal-header">
-                            <h4 class="modal-title">Add Class Routine</h4>
-                            <button type="button" class="btn-close custom-btn-close" data-bs-dismiss="modal"
-                                aria-label="Close">
-                                <i class="ti ti-x"></i>
-                            </button>
-                        </div>
-                        <form action="index.html">
-                            <div class="modal-body">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="mb-3">
-                                            <label class="form-label">Teacher</label>
-                                            <select class="select">
-                                                <option>Select</option>
-                                                <option>Erickson</option>
-                                                <option>Mori</option>
-                                                <option>Joseph</option>
-                                                <option>James</option>
-                                            </select>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label class="form-label">Class</label>
-                                            <select class="select">
-                                                <option>Select</option>
-                                                <option>I</option>
-                                                <option>II</option>
-                                                <option>III</option>
-                                                <option>IV</option>
-                                            </select>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label class="form-label">Section</label>
-                                            <select class="select">
-                                                <option>Select</option>
-                                                <option>A</option>
-                                                <option>B</option>
-                                                <option>C</option>
-                                            </select>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label class="form-label">Day</label>
-                                            <select class="select">
-                                                <option>Select</option>
-                                                <option>Monday</option>
-                                                <option>Tuesday</option>
-                                                <option>Wedneshday</option>
-                                                <option>Thursday</option>
-                                                <option>Friday</option>
-                                            </select>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="mb-3">
-                                                    <label class="form-label">Start Time</label>
-                                                    <div class="date-pic">
-                                                        <input type="text" class="form-control timepicker"
-                                                            placeholder="Choose">
-                                                        <span class="cal-icon"><i class="ti ti-clock"></i></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="mb-3">
-                                                    <label class="form-label">End Time</label>
-                                                    <div class="date-pic">
-                                                        <input type="text" class="form-control timepicker"
-                                                            placeholder="Choose">
-                                                        <span class="cal-icon"><i class="ti ti-clock"></i></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label class="form-label">Class Room</label>
-                                            <select class="select">
-                                                <option>Select</option>
-                                                <option>101</option>
-                                                <option>102</option>
-                                                <option>103</option>
-                                                <option>104</option>
-                                                <option>105</option>
-                                            </select>
-                                        </div>
-                                        <div
-                                            class="modal-satus-toggle d-flex align-items-center justify-content-between">
-                                            <div class="status-title">
-                                                <h5>Status</h5>
-                                                <p>Change the Status by toggle </p>
-                                            </div>
-                                            <div class="status-toggle modal-status">
-                                                <input type="checkbox" id="user1" class="check">
-                                                <label for="user1" class="checktoggle"> </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <a href="#" class="btn btn-light me-2" data-bs-dismiss="modal">Cancel</a>
-                                <button type="submit" class="btn btn-primary">Add Class Routine</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /Add Class Routine -->
+     
 
-        
+      
 
     </div>
     <!-- /Main Wrapper -->
