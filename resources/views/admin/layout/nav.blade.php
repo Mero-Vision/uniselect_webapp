@@ -3,13 +3,13 @@
 
     <!-- Logo -->
     <div class="header-left active">
-        <a href="index.html" class="logo logo-normal">
+        <a href="{{url('admin/dashboard')}}" class="logo logo-normal">
             <img src="{{ url('assets/login/img/logo.png') }}" alt="Logo" style="width: 50px">
         </a>
-        <a href="index.html" class="logo-small">
+        <a href="{{url('admin/dashboard')}}" class="logo-small">
             <img src="{{ url('assets/login/img/logo.png') }}" alt="Logo">
         </a>
-        <a href="index.html" class="dark-logo">
+        <a href="{{url('admin/dashboard')}}" class="dark-logo">
             <img src="{{ url('assets/login/img/logo.png') }}" alt="Logo">
         </a>
         <a id="toggle_btn" href="javascript:void(0);">

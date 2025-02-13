@@ -16,7 +16,7 @@
                     <h6 class="submenu-hdr"><span>Main</span></h6>
                     <ul>
                         <li class="submenu">
-                            <a href="javascript:void(0);" class="subdrop active"><i
+                            <a href="{{url('admin/dashboard')}}" class="subdrop active"><i
                                     class="ti ti-layout-dashboard"></i><span>Dashboard</span></a>
                         </li>
                     </ul>

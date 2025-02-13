@@ -1,5 +1,5 @@
 <link rel="shortcut icon" type="image/x-icon" href="{{ url('assets/admin/img/logo.png') }}">
-<script src="{{url('assets/admin/js/theme-script.js')}}"></script>
+{{-- <script src="{{url('assets/admin/js/theme-script.js')}}"></script> --}}
 <link rel="stylesheet" href="{{ url('assets/admin/css/bootstrap.min.css') }}">
 <link rel="stylesheet" href="{{ url('assets/admin/css/feather.css') }}">
 <link rel="stylesheet" href="{{ url('assets/admin/css/tabler-icons.css') }}">
