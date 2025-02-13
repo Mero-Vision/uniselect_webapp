@@ -83,7 +83,7 @@ class AuthService
                     request()->session()->regenerate();
 
                     sweetalert()->success('Welcome ' . $user->name);
-                    return redirect()->intended('student/home');
+                    return redirect()->intended('admin/dashboard');
                 } else {
 
                     return back()->with('warning', 'Unauthorized access attempt.', ['email' => $credentials['email']]);
