@@ -39,7 +39,7 @@
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="row justify-content-center align-items-center vh-100 overflow-auto flex-wrap ">
                             <div class="col-md-8 mx-auto p-4">
-                                <form action="{{ url('login') }}" method="POST">
+                                <form action="{{ url('admin/login') }}" method="POST">
                                     @csrf
                                     <div>
                                         <div class=" mx-auto mb-5 text-center">

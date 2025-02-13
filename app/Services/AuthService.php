@@ -63,6 +63,51 @@ class AuthService
         }
     }
 
+
+    public function adminLogin(array $credentials, bool $remember = false)
+    {
+        // Rate limiting to prevent brute-force attacks
+        $this->ensureIsNotRateLimited($credentials['email']);
+
+        try {
+            // Attempt to authenticate the user
+            if (Auth::attempt($credentials, $remember)) {
+                $user = Auth::user();
+
+                // Clear login rate limiter
+                RateLimiter::clear($this->throttleKey($credentials['email']));
+
+                // Check if the user has the STUDENT role
+                if ($user->hasRole(User::ADMIN)) {
+                    // Regenerate session ID to prevent session fixation attacks
+                    request()->session()->regenerate();
+
+                    sweetalert()->success('Welcome ' . $user->name);
+                    return redirect()->intended('student/home');
+                } else {
+
+                    return back()->with('warning', 'Unauthorized access attempt.', ['email' => $credentials['email']]);
+
+                    Auth::logout();
+                    throw ValidationException::withMessages([
+                        'email' => 'You do not have permission to access this area.',
+                    ]);
+                }
+            } else {
+
+                // Increment rate limiter for failed attempts
+                RateLimiter::hit($this->throttleKey($credentials['email']));
+
+                return back()->with('warning', 'Invalid email or password. Please try again.');
+            }
+        } catch (\Throwable $th) {
+
+            Log::error('Login error.', ['error' => $th->getMessage(), 'email' => $credentials['email']]);
+
+            throw $th;
+        }
+    }
+
     /**
      * Ensure the login request is not rate limited.
      */
