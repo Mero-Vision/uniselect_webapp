@@ -46,12 +46,8 @@
                     </div>
                     <div class="d-flex my-xl-auto right-content align-items-center flex-wrap">
                         <div class="mb-2">
-                            <a href="add-student.html" class="btn btn-primary d-flex align-items-center me-3"><i
+                            <a href="" class="btn btn-primary d-flex align-items-center me-3"><i
                                     class="ti ti-square-rounded-plus me-2"></i>Add New Student</a>
-                        </div>
-                        <div class="mb-2">
-                            <a href="collect-fees.html" class="btn btn-light d-flex align-items-center">Fees
-                                Details</a>
                         </div>
                     </div>
                 </div>
@@ -192,7 +188,7 @@
 
                     <!-- Links -->
                     <div class="col-xl-3 col-md-6 d-flex">
-                        <a href="student-attendance.html"
+                        <a href=""
                             class="card bg-warning-transparent border border-5 border-white animate-card flex-fill">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between">
@@ -214,7 +210,7 @@
 
                     <!-- Links -->
                     <div class="col-xl-3 col-md-6 d-flex">
-                        <a href="events.html"
+                        <a href=""
                             class="card bg-success-transparent border border-5 border-white animate-card flex-fill ">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between">
@@ -236,7 +232,7 @@
 
                     <!-- Links -->
                     <div class="col-xl-3 col-md-6 d-flex">
-                        <a href="membership-plans.html"
+                        <a href=""
                             class="card bg-danger-transparent border border-5 border-white animate-card flex-fill">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between">
@@ -258,7 +254,7 @@
 
                     <!-- Links -->
                     <div class="col-xl-3 col-md-6 d-flex">
-                        <a href="student-attendance.html"
+                        <a href=""
                             class="card bg-secondary-transparent border border-5 border-white animate-card flex-fill">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between">
