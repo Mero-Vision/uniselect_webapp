@@ -35,4 +35,11 @@ class AuthController extends Controller
             return back()->with('error', 'An error occurred during login. Please try again later.');
         }
     }
+
+    public function logout(): RedirectResponse
+    {
+        $this->authService->logout();
+
+        return redirect('/')->with('success', 'You have been logged out successfully.');
+    }
 }

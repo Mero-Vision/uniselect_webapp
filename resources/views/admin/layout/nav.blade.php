@@ -155,7 +155,7 @@
                             <a class="dropdown-item d-inline-flex align-items-center p-2"
                                 href=""><i class="ti ti-settings me-2"></i>Settings</a>
                             <hr class="m-0">
-                            <a class="dropdown-item d-inline-flex align-items-center p-2" href=""><i
+                            <a class="dropdown-item d-inline-flex align-items-center p-2" href="{{url('admin/logout')}}"><i
                                     class="ti ti-login me-2"></i>Logout</a>
                         </div>
                     </div>
