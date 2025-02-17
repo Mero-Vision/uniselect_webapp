@@ -120,7 +120,7 @@
                 
                 
                 <div class="pe-1">
-                    <a href="" class="btn btn-outline-light bg-white btn-icon position-relative me-1">
+                    <a href="{{url('chatify')}}" class="btn btn-outline-light bg-white btn-icon position-relative me-1">
                         <i class="ti ti-brand-hipchat"></i>
                         <span class="chat-status-dot"></span>
                     </a>
