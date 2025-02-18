@@ -4,7 +4,7 @@ use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\DashboardController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('login',[AuthController::class,'index']);
+Route::get('login',[AuthController::class,'index'])->name('login');
 Route::post('login',[AuthController::class,'login']);
 
 
