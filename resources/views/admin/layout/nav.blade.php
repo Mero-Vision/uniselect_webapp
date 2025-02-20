@@ -120,7 +120,7 @@
                 
                 
                 <div class="pe-1">
-                    <a href="{{url('chatify')}}" class="btn btn-outline-light bg-white btn-icon position-relative me-1">
+                    <a href="{{url('service-center')}}" class="btn btn-outline-light bg-white btn-icon position-relative me-1">
                         <i class="ti ti-brand-hipchat"></i>
                         <span class="chat-status-dot"></span>
                     </a>
@@ -150,7 +150,7 @@
                                 </div>
                             </div>
                             <hr class="m-0">
-                            <a class="dropdown-item d-inline-flex align-items-center p-2" href="">
+                            <a class="dropdown-item d-inline-flex align-items-center p-2" href="{{url('admin/settings/profile')}}">
                                 <i class="ti ti-user-circle me-2"></i>My Profile</a>
                             <a class="dropdown-item d-inline-flex align-items-center p-2"
                                 href=""><i class="ti ti-settings me-2"></i>Settings</a>
