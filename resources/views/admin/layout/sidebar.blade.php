@@ -61,17 +61,18 @@
                     <ul>
                         <li class="submenu">
                             <a href="javascript:void(0);"
-                                class="{{ request()->is('admin/settings/profile') ? 'subdrop active' : '' }} ">
+                                class="{{ request()->is('admin/settings*') ? 'subdrop active' : '' }} ">
                                 <i class="ti ti-shield-cog"></i><span>General Settings</span><span
                                     class="menu-arrow"></span>
                             </a>
                             <ul>
                                 <li class="{{ request()->is('admin/settings/profile') ? 'active' : '' }}"><a
-                                        href="{{ url('admin/settings/profile') }}"
-                                        ><span>Profile
+                                        href="{{ url('admin/settings/profile') }}"><span>Profile
                                             Settings</span></a></li>
 
-                                <li><a href="">Company Settings</a></li>
+                                <li class="{{ request()->is('admin/settings/company') ? 'active' : '' }}"><a
+                                        href="{{ url('admin/settings/company') }}"><span>Company
+                                            Settings</span></a></li>
 
 
 
