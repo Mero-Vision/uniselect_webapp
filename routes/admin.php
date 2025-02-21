@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SiteSettingController;
+use App\Http\Controllers\Admin\UniversityController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('login', [AuthController::class, 'index'])->name('login');
@@ -19,4 +20,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('settings/profile', [SettingController::class, 'profile']);
     Route::get('settings/company', [SettingController::class, 'company']);
     Route::post('site-setting', [SiteSettingController::class, 'store']);
+
+    Route::get('university', [UniversityController::class, 'index']);
+    Route::get('university/create-university', [UniversityController::class, 'create']);
+    Route::post('university/create-university', [UniversityController::class, 'store']);
+
+
 });

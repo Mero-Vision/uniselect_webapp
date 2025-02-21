@@ -26,10 +26,17 @@
                     <h6 class="submenu-hdr"><span>Universities</span></h6>
                     <ul>
                         <li class="submenu">
-                            <a href="javascript:void(0);"><i class="ti ti-school"></i><span>University</span><span
-                                    class="menu-arrow"></span></a>
+                            <a href="javascript:void(0);"
+                                class="{{ request()->is('admin/university*') ? 'subdrop active' : '' }} "><i
+                                    class="ti ti-school"></i><span>University</span><span class="menu-arrow"></span></a>
                             <ul>
-                                <li><a href="">All Universities</a></li>
+                                <li class="{{ request()->is('admin/university') ? 'active' : '' }}"><a
+                                        href="{{ url('admin/university') }}"><span>All
+                                            University</span></a></li>
+
+                                <li class="{{ request()->is('admin/university/create-university') ? 'active' : '' }}"><a
+                                        href="{{ url('admin/university/create-university') }}"><span>Create
+                                            University</span></a></li>
 
                             </ul>
                         </li>
