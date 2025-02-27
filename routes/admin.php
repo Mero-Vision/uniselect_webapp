@@ -2,6 +2,7 @@
 
 
 use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SiteSettingController;
@@ -24,6 +25,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('university', [UniversityController::class, 'index']);
     Route::get('university/create-university', [UniversityController::class, 'create']);
     Route::post('university/create-university', [UniversityController::class, 'store']);
+
+    Route::get('courses', [CourseController::class, 'index']);
+    Route::get('courses/create-course', [CourseController::class, 'create']);
+    Route::post('courses/create-course', [CourseController::class, 'store']);
+
 
 
 });

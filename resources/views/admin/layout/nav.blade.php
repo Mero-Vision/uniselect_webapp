@@ -69,40 +69,40 @@
                             <div class="p-3 pb-0">
                                 <div class="row gx-2">
                                     <div class="col-6">
-                                        <a href="add-student.html"
+                                        <a href=""
                                             class="d-block bg-primary-transparent ronded p-2 text-center mb-3 class-hover">
                                             <div class="avatar avatar-lg mb-2">
                                                 <span
                                                     class="d-inline-flex align-items-center justify-content-center w-100 h-100 bg-primary rounded-circle"><i
                                                         class="ti ti-school"></i></span>
                                             </div>
-                                            <p class="text-dark">Students</p>
+                                            <p class="text-dark">University</p>
                                         </a>
                                     </div>
                                     <div class="col-6">
-                                        <a href="add-teacher.html"
+                                        <a href=""
                                             class="d-block bg-success-transparent ronded p-2 text-center mb-3 class-hover">
                                             <div class="avatar avatar-lg mb-2">
                                                 <span
                                                     class="d-inline-flex align-items-center justify-content-center w-100 h-100 bg-success rounded-circle"><i
                                                         class="ti ti-users"></i></span>
                                             </div>
-                                            <p class="text-dark">Teachers</p>
+                                            <p class="text-dark">Courses</p>
                                         </a>
                                     </div>
                                     <div class="col-6">
-                                        <a href="add-staff.html"
+                                        <a href=""
                                             class="d-block bg-warning-transparent ronded p-2 text-center mb-3 class-hover">
                                             <div class="avatar avatar-lg rounded-circle mb-2">
                                                 <span
                                                     class="d-inline-flex align-items-center justify-content-center w-100 h-100 bg-warning rounded-circle"><i
                                                         class="ti ti-users-group"></i></span>
                                             </div>
-                                            <p class="text-dark">Staffs</p>
+                                            <p class="text-dark">Application</p>
                                         </a>
                                     </div>
                                     <div class="col-6">
-                                        <a href="add-invoice.html"
+                                        <a href=""
                                             class="d-block bg-info-transparent ronded p-2 text-center mb-3 class-hover">
                                             <div class="avatar avatar-lg mb-2">
                                                 <span

@@ -41,10 +41,17 @@
                             </ul>
                         </li>
                         <li class="submenu">
-                            <a href="javascript:void(0);"><i class="ti ti-user-bolt"></i><span>Courses</span><span
-                                    class="menu-arrow"></span></a>
+                            <a href="javascript:void(0);"
+                                class="{{ request()->is('admin/courses*') ? 'subdrop active' : '' }} "><i
+                                    class="ti ti-user-bolt"></i><span>Courses</span><span class="menu-arrow"></span></a>
                             <ul>
-                                <li><a href="">All Courses</a></li>
+                                <li class="{{ request()->is('admin/courses') ? 'active' : '' }}"><a
+                                        href="{{ url('admin/courses') }}"><span>All
+                                            Courses</span></a></li>
+
+                                <li class="{{ request()->is('admin/courses/create-course') ? 'active' : '' }}"><a
+                                        href="{{ url('admin/courses/create-course') }}"><span>Create
+                                            Course</span></a></li>
 
                             </ul>
                         </li>

@@ -8,7 +8,7 @@
     <meta name="keywords" content="admin, estimates, bootstrap, business, html5, responsive, Projects">
     <meta name="author" content="Dreams technologies - Bootstrap Admin Template">
     <meta name="robots" content="noindex, nofollow">
-    <title>Customer Login</title>
+    <title>Admin Login</title>
     <link rel="shortcut icon" type="image/x-icon" href="{{ url('assets/login/img/logo.png') }}">
     <link rel="stylesheet" href="{{ url('assets/login/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url('assets/login/css/feather.css') }}">
