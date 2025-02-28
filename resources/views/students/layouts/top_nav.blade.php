@@ -29,12 +29,9 @@
                     </div>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <a href="https://product.geniusocean.com/genius-wallet/user/profile" class="dropdown-item">Profile
+                    <a href="{{url('student/profile')}}" class="dropdown-item">Profile
                         Setting</a>
-                    <a href="https://product.geniusocean.com/genius-wallet/user/generate-qrcode"
-                        class="dropdown-item">QR Code</a>
-                    <a href="https://product.geniusocean.com/genius-wallet/user/two-step/authentication"
-                        class="dropdown-item">Two Step Security</a>
+                    
                     <a href="https://product.geniusocean.com/genius-wallet/user/support/tickets"
                         class="dropdown-item">Support Ticket</a>
                     <div class="dropdown-divider"></div>
