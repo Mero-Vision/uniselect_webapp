@@ -130,7 +130,7 @@
                         <div class="col-lg-9">
                             <div class="card">
                                 <div class="card-header">
-                                    <h3 class="card-title">Latest Transactions</h3>
+                                    <h3 class="card-title">My Applications</h3>
                                 </div>
 
                                 <div class="table-responsive">
@@ -148,131 +148,20 @@
                                             <tr>
                                                 <td data-label="Date">10-Feb-2025</td>
                                                 <td data-label="Description">
-                                                    Exchanged money from INR to BDT
+                                                    Bedfordshire
                                                 </td>
                                                 <td data-label="Remark">
-                                                    <span class="badge badge-dark">Money Exchange</span>
+                                                    <span class="badge badge-dark">University</span>
                                                 </td>
                                                 <td data-label="Amount">
-                                                    <span class="text-danger">- 6.00 INR</span>
+                                                    <span class="text-danger">500</span>
                                                 </td>
                                                 <td data-label="Details" class="text-end">
                                                     <button class="btn btn-primary btn-sm details"
                                                         data-data="{&quot;id&quot;:4147,&quot;trnx&quot;:&quot;IMGNKNQWUMS2&quot;,&quot;user_id&quot;:&quot;51&quot;,&quot;user_type&quot;:&quot;1&quot;,&quot;currency_id&quot;:&quot;10&quot;,&quot;wallet_id&quot;:null,&quot;charge&quot;:&quot;171.6337000000&quot;,&quot;amount&quot;:&quot;6.0000000000&quot;,&quot;remark&quot;:&quot;money_exchange&quot;,&quot;type&quot;:&quot;-&quot;,&quot;details&quot;:&quot;Exchanged money from INR to BDT&quot;,&quot;invoice_num&quot;:null,&quot;created_at&quot;:&quot;2025-02-10T12:17:03.000000Z&quot;,&quot;updated_at&quot;:&quot;2025-02-10T12:17:03.000000Z&quot;,&quot;currency&quot;:{&quot;id&quot;:10,&quot;default&quot;:&quot;0&quot;,&quot;symbol&quot;:&quot;\u20b9&quot;,&quot;code&quot;:&quot;INR&quot;,&quot;curr_name&quot;:&quot;Indian Rupee&quot;,&quot;type&quot;:&quot;1&quot;,&quot;status&quot;:&quot;1&quot;,&quot;rate&quot;:&quot;85.7868500000&quot;,&quot;created_at&quot;:&quot;2022-01-25T19:28:23.000000Z&quot;,&quot;updated_at&quot;:&quot;2025-01-01T13:21:26.000000Z&quot;}}">Details</button>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td data-label="Date">10-Feb-2025</td>
-                                                <td data-label="Description">
-                                                    Exchanged money from INR to BDT
-                                                </td>
-                                                <td data-label="Remark">
-                                                    <span class="badge badge-dark">Money Exchange</span>
-                                                </td>
-                                                <td data-label="Amount">
-                                                    <span class="text-success">+ 8.35 BDT</span>
-                                                </td>
-                                                <td data-label="Details" class="text-end">
-                                                    <button class="btn btn-primary btn-sm details"
-                                                        data-data="{&quot;id&quot;:4148,&quot;trnx&quot;:&quot;IMGNKNQWUMS2&quot;,&quot;user_id&quot;:&quot;51&quot;,&quot;user_type&quot;:&quot;1&quot;,&quot;currency_id&quot;:&quot;6&quot;,&quot;wallet_id&quot;:null,&quot;charge&quot;:&quot;0.0000000000&quot;,&quot;amount&quot;:&quot;8.3529163502&quot;,&quot;remark&quot;:&quot;money_exchange&quot;,&quot;type&quot;:&quot;+&quot;,&quot;details&quot;:&quot;Exchanged money from INR to BDT&quot;,&quot;invoice_num&quot;:null,&quot;created_at&quot;:&quot;2025-02-10T12:17:03.000000Z&quot;,&quot;updated_at&quot;:&quot;2025-02-10T12:17:03.000000Z&quot;,&quot;currency&quot;:{&quot;id&quot;:6,&quot;default&quot;:&quot;0&quot;,&quot;symbol&quot;:&quot;\u09f3&quot;,&quot;code&quot;:&quot;BDT&quot;,&quot;curr_name&quot;:&quot;Bangladeshi Taka&quot;,&quot;type&quot;:&quot;1&quot;,&quot;status&quot;:&quot;1&quot;,&quot;rate&quot;:&quot;119.4283970000&quot;,&quot;created_at&quot;:&quot;2021-12-20T17:48:53.000000Z&quot;,&quot;updated_at&quot;:&quot;2025-01-01T13:21:26.000000Z&quot;}}">Details</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td data-label="Date">09-Feb-2025</td>
-                                                <td data-label="Description">
-                                                    Received money from ma@gmail.com
-                                                </td>
-                                                <td data-label="Remark">
-                                                    <span class="badge badge-dark">Transfer Money</span>
-                                                </td>
-                                                <td data-label="Amount">
-                                                    <span class="text-success">+ 100.00 USD</span>
-                                                </td>
-                                                <td data-label="Details" class="text-end">
-                                                    <button class="btn btn-primary btn-sm details"
-                                                        data-data="{&quot;id&quot;:4146,&quot;trnx&quot;:&quot;O7O832LVRETC&quot;,&quot;user_id&quot;:&quot;51&quot;,&quot;user_type&quot;:&quot;1&quot;,&quot;currency_id&quot;:&quot;1&quot;,&quot;wallet_id&quot;:&quot;89&quot;,&quot;charge&quot;:&quot;0.0000000000&quot;,&quot;amount&quot;:&quot;100.0000000000&quot;,&quot;remark&quot;:&quot;transfer_money&quot;,&quot;type&quot;:&quot;+&quot;,&quot;details&quot;:&quot;Received money from ma@gmail.com&quot;,&quot;invoice_num&quot;:null,&quot;created_at&quot;:&quot;2025-02-09T02:59:44.000000Z&quot;,&quot;updated_at&quot;:&quot;2025-02-09T02:59:44.000000Z&quot;,&quot;currency&quot;:{&quot;id&quot;:1,&quot;default&quot;:&quot;1&quot;,&quot;symbol&quot;:&quot;$&quot;,&quot;code&quot;:&quot;USD&quot;,&quot;curr_name&quot;:&quot;United State Dollar&quot;,&quot;type&quot;:&quot;1&quot;,&quot;status&quot;:&quot;1&quot;,&quot;rate&quot;:&quot;1.0000000000&quot;,&quot;created_at&quot;:&quot;2021-12-19T21:12:58.000000Z&quot;,&quot;updated_at&quot;:&quot;2025-01-01T13:21:26.000000Z&quot;}}">Details</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td data-label="Date">08-Feb-2025</td>
-                                                <td data-label="Description">
-                                                    Payment to merchant : merchant@gmail.com
-                                                </td>
-                                                <td data-label="Remark">
-                                                    <span class="badge badge-dark">Merchant Payment</span>
-                                                </td>
-                                                <td data-label="Amount">
-                                                    <span class="text-danger">- 10.00 INR</span>
-                                                </td>
-                                                <td data-label="Details" class="text-end">
-                                                    <button class="btn btn-primary btn-sm details"
-                                                        data-data="{&quot;id&quot;:4143,&quot;trnx&quot;:&quot;60ZMLSVCX7UZ&quot;,&quot;user_id&quot;:&quot;51&quot;,&quot;user_type&quot;:&quot;1&quot;,&quot;currency_id&quot;:&quot;10&quot;,&quot;wallet_id&quot;:&quot;832&quot;,&quot;charge&quot;:&quot;0.0000000000&quot;,&quot;amount&quot;:&quot;10.0000000000&quot;,&quot;remark&quot;:&quot;merchant_payment&quot;,&quot;type&quot;:&quot;-&quot;,&quot;details&quot;:&quot;Payment to merchant : merchant@gmail.com&quot;,&quot;invoice_num&quot;:null,&quot;created_at&quot;:&quot;2025-02-08T18:47:57.000000Z&quot;,&quot;updated_at&quot;:&quot;2025-02-08T18:47:57.000000Z&quot;,&quot;currency&quot;:{&quot;id&quot;:10,&quot;default&quot;:&quot;0&quot;,&quot;symbol&quot;:&quot;\u20b9&quot;,&quot;code&quot;:&quot;INR&quot;,&quot;curr_name&quot;:&quot;Indian Rupee&quot;,&quot;type&quot;:&quot;1&quot;,&quot;status&quot;:&quot;1&quot;,&quot;rate&quot;:&quot;85.7868500000&quot;,&quot;created_at&quot;:&quot;2022-01-25T19:28:23.000000Z&quot;,&quot;updated_at&quot;:&quot;2025-01-01T13:21:26.000000Z&quot;}}">Details</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td data-label="Date">06-Feb-2025</td>
-                                                <td data-label="Description">
-                                                    Voucher commission
-                                                </td>
-                                                <td data-label="Remark">
-                                                    <span class="badge badge-dark">Voucher Commission</span>
-                                                </td>
-                                                <td data-label="Amount">
-                                                    <span class="text-success">+ 10.00 USD</span>
-                                                </td>
-                                                <td data-label="Details" class="text-end">
-                                                    <button class="btn btn-primary btn-sm details"
-                                                        data-data="{&quot;id&quot;:4142,&quot;trnx&quot;:&quot;89ZL1KIJBAKS&quot;,&quot;user_id&quot;:&quot;51&quot;,&quot;user_type&quot;:&quot;1&quot;,&quot;currency_id&quot;:&quot;1&quot;,&quot;wallet_id&quot;:null,&quot;charge&quot;:&quot;0.0000000000&quot;,&quot;amount&quot;:&quot;10.0000000000&quot;,&quot;remark&quot;:&quot;voucher_commission&quot;,&quot;type&quot;:&quot;+&quot;,&quot;details&quot;:&quot;Voucher commission&quot;,&quot;invoice_num&quot;:null,&quot;created_at&quot;:&quot;2025-02-06T09:28:03.000000Z&quot;,&quot;updated_at&quot;:&quot;2025-02-06T09:28:03.000000Z&quot;,&quot;currency&quot;:{&quot;id&quot;:1,&quot;default&quot;:&quot;1&quot;,&quot;symbol&quot;:&quot;$&quot;,&quot;code&quot;:&quot;USD&quot;,&quot;curr_name&quot;:&quot;United State Dollar&quot;,&quot;type&quot;:&quot;1&quot;,&quot;status&quot;:&quot;1&quot;,&quot;rate&quot;:&quot;1.0000000000&quot;,&quot;created_at&quot;:&quot;2021-12-19T21:12:58.000000Z&quot;,&quot;updated_at&quot;:&quot;2025-01-01T13:21:26.000000Z&quot;}}">Details</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td data-label="Date">06-Feb-2025</td>
-                                                <td data-label="Description">
-                                                    Voucher created
-                                                </td>
-                                                <td data-label="Remark">
-                                                    <span class="badge badge-dark">Create Voucher</span>
-                                                </td>
-                                                <td data-label="Amount">
-                                                    <span class="text-danger">- 118.00 USD</span>
-                                                </td>
-                                                <td data-label="Details" class="text-end">
-                                                    <button class="btn btn-primary btn-sm details"
-                                                        data-data="{&quot;id&quot;:4141,&quot;trnx&quot;:&quot;89ZL1KIJBAKS&quot;,&quot;user_id&quot;:&quot;51&quot;,&quot;user_type&quot;:&quot;1&quot;,&quot;currency_id&quot;:&quot;1&quot;,&quot;wallet_id&quot;:null,&quot;charge&quot;:&quot;18.0000000000&quot;,&quot;amount&quot;:&quot;118.0000000000&quot;,&quot;remark&quot;:&quot;create_voucher&quot;,&quot;type&quot;:&quot;-&quot;,&quot;details&quot;:&quot;Voucher created&quot;,&quot;invoice_num&quot;:null,&quot;created_at&quot;:&quot;2025-02-06T09:28:03.000000Z&quot;,&quot;updated_at&quot;:&quot;2025-02-06T09:28:03.000000Z&quot;,&quot;currency&quot;:{&quot;id&quot;:1,&quot;default&quot;:&quot;1&quot;,&quot;symbol&quot;:&quot;$&quot;,&quot;code&quot;:&quot;USD&quot;,&quot;curr_name&quot;:&quot;United State Dollar&quot;,&quot;type&quot;:&quot;1&quot;,&quot;status&quot;:&quot;1&quot;,&quot;rate&quot;:&quot;1.0000000000&quot;,&quot;created_at&quot;:&quot;2021-12-19T21:12:58.000000Z&quot;,&quot;updated_at&quot;:&quot;2025-01-01T13:21:26.000000Z&quot;}}">Details</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td data-label="Date">06-Feb-2025</td>
-                                                <td data-label="Description">
-                                                    Exchanged money from USD to EUR
-                                                </td>
-                                                <td data-label="Remark">
-                                                    <span class="badge badge-dark">Money Exchange</span>
-                                                </td>
-                                                <td data-label="Amount">
-                                                    <span class="text-success">+ 38.44 EUR</span>
-                                                </td>
-                                                <td data-label="Details" class="text-end">
-                                                    <button class="btn btn-primary btn-sm details"
-                                                        data-data="{&quot;id&quot;:4140,&quot;trnx&quot;:&quot;RWQI32HY2TEX&quot;,&quot;user_id&quot;:&quot;51&quot;,&quot;user_type&quot;:&quot;1&quot;,&quot;currency_id&quot;:&quot;4&quot;,&quot;wallet_id&quot;:null,&quot;charge&quot;:&quot;0.0000000000&quot;,&quot;amount&quot;:&quot;38.4406000000&quot;,&quot;remark&quot;:&quot;money_exchange&quot;,&quot;type&quot;:&quot;+&quot;,&quot;details&quot;:&quot;Exchanged money from USD to EUR&quot;,&quot;invoice_num&quot;:null,&quot;created_at&quot;:&quot;2025-02-06T09:27:23.000000Z&quot;,&quot;updated_at&quot;:&quot;2025-02-06T09:27:23.000000Z&quot;,&quot;currency&quot;:{&quot;id&quot;:4,&quot;default&quot;:&quot;0&quot;,&quot;symbol&quot;:&quot;\u20ac&quot;,&quot;code&quot;:&quot;EUR&quot;,&quot;curr_name&quot;:&quot;European Currency&quot;,&quot;type&quot;:&quot;1&quot;,&quot;status&quot;:&quot;1&quot;,&quot;rate&quot;:&quot;0.9610150000&quot;,&quot;created_at&quot;:&quot;2021-12-19T21:12:58.000000Z&quot;,&quot;updated_at&quot;:&quot;2025-01-01T13:21:26.000000Z&quot;}}">Details</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td data-label="Date">06-Feb-2025</td>
-                                                <td data-label="Description">
-                                                    Exchanged money from USD to EUR
-                                                </td>
-                                                <td data-label="Remark">
-                                                    <span class="badge badge-dark">Money Exchange</span>
-                                                </td>
-                                                <td data-label="Amount">
-                                                    <span class="text-danger">- 40.00 USD</span>
-                                                </td>
-                                                <td data-label="Details" class="text-end">
-                                                    <button class="btn btn-primary btn-sm details"
-                                                        data-data="{&quot;id&quot;:4139,&quot;trnx&quot;:&quot;RWQI32HY2TEX&quot;,&quot;user_id&quot;:&quot;51&quot;,&quot;user_type&quot;:&quot;1&quot;,&quot;currency_id&quot;:&quot;1&quot;,&quot;wallet_id&quot;:null,&quot;charge&quot;:&quot;2.4000000000&quot;,&quot;amount&quot;:&quot;40.0000000000&quot;,&quot;remark&quot;:&quot;money_exchange&quot;,&quot;type&quot;:&quot;-&quot;,&quot;details&quot;:&quot;Exchanged money from USD to EUR&quot;,&quot;invoice_num&quot;:null,&quot;created_at&quot;:&quot;2025-02-06T09:27:23.000000Z&quot;,&quot;updated_at&quot;:&quot;2025-02-06T09:27:23.000000Z&quot;,&quot;currency&quot;:{&quot;id&quot;:1,&quot;default&quot;:&quot;1&quot;,&quot;symbol&quot;:&quot;$&quot;,&quot;code&quot;:&quot;USD&quot;,&quot;curr_name&quot;:&quot;United State Dollar&quot;,&quot;type&quot;:&quot;1&quot;,&quot;status&quot;:&quot;1&quot;,&quot;rate&quot;:&quot;1.0000000000&quot;,&quot;created_at&quot;:&quot;2021-12-19T21:12:58.000000Z&quot;,&quot;updated_at&quot;:&quot;2025-01-01T13:21:26.000000Z&quot;}}">Details</button>
-                                                </td>
-                                            </tr>
+                                            
                                         </tbody>
                                     </table>
                                 </div>
@@ -281,7 +170,7 @@
                         <div class="col-lg-3">
                             <div class="card wallet__card">
                                 <div class="card-header">
-                                    <h4>Your Wallets</h4>
+                                    <h4>Login Activity</h4>
                                 </div>
                                 <div class="card-body card-body-scrollable card-body-scrollable-shadow">
                                     <div class="divide-y">
@@ -289,138 +178,20 @@
                                             <div class="row align-items-center">
                                                 <div class="col-auto">
                                                     <span class="bg-blue text-white avatar">
-                                                        €
+                                                        1 hr ago
                                                     </span>
                                                 </div>
                                                 <div class="col">
                                                     <div class="font-weight-medium">
-                                                        77.59 EUR
+                                                        Device: Mobile
                                                     </div>
                                                     <div class="text-muted">
-                                                        European Currency
+                                                        Browser: Chrome
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div>
-                                            <div class="row align-items-center">
-                                                <div class="col-auto">
-                                                    <span class="bg-blue text-white avatar">
-                                                        $
-                                                    </span>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="font-weight-bold text-success">
-                                                        581.18 USD
-                                                    </div>
-                                                    <div class="text-muted">
-                                                        United State Dollar
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="row align-items-center">
-                                                <div class="col-auto">
-                                                    <span class="bg-blue text-white avatar">
-                                                        ₹
-                                                    </span>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="font-weight-medium">
-                                                        41,631.57 INR
-                                                    </div>
-                                                    <div class="text-muted">
-                                                        Indian Rupee
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="row align-items-center">
-                                                <div class="col-auto">
-                                                    <span class="bg-blue text-white avatar">
-                                                        ₿
-                                                    </span>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="font-weight-medium">
-                                                        0.01632926 BTC
-                                                    </div>
-                                                    <div class="text-muted">
-                                                        Bitcoin
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="row align-items-center">
-                                                <div class="col-auto">
-                                                    <span class="bg-blue text-white avatar">
-                                                        ¥
-                                                    </span>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="font-weight-medium">
-                                                        6,161.38 JPY
-                                                    </div>
-                                                    <div class="text-muted">
-                                                        Japanese Yen
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="row align-items-center">
-                                                <div class="col-auto">
-                                                    <span class="bg-blue text-white avatar">
-                                                        ₦
-                                                    </span>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="font-weight-medium">
-                                                        262,537.58 NGN
-                                                    </div>
-                                                    <div class="text-muted">
-                                                        Nigerian naira
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="row align-items-center">
-                                                <div class="col-auto">
-                                                    <span class="bg-blue text-white avatar">
-                                                        ৳
-                                                    </span>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="font-weight-medium">
-                                                        242.71 BDT
-                                                    </div>
-                                                    <div class="text-muted">
-                                                        Bangladeshi Taka
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="row align-items-center">
-                                                <div class="col-auto">
-                                                    <span class="bg-blue text-white avatar">
-                                                        £
-                                                    </span>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="font-weight-medium">
-                                                        9.72 GBP
-                                                    </div>
-                                                    <div class="text-muted">
-                                                        Greate British Pound
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        
 
                                     </div>
                                 </div>
