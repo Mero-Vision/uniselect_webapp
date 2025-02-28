@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Home</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     @include('students.layouts.header')
 
 </head>
@@ -45,28 +46,58 @@
                                 <div class="card-body">
                                     <div class="row align-items-center">
                                         <div class="col-auto">
-                                            <span class="bg-danger text-white avatar">
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    class="icon icon-tabler icon-tabler-arrows-right-left"
-                                                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
-                                                    stroke="currentColor" fill="none" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                    <line x1="21" y1="7" x2="3" y2="7">
-                                                    </line>
-                                                    <path d="M18 10l3 -3l-3 -3"></path>
-                                                    <path d="M6 20l-3 -3l3 -3"></path>
-                                                    <line x1="3" y1="17" x2="21" y2="17">
-                                                    </line>
-                                                </svg>
+                                            <span class="text-white avatar">
+                                                <img src="{{url('assets/students/img/application.png')}}" />
                                             </span>
                                         </div>
                                         <div class="col">
                                             <div class="font-weight-medium">
-                                                5,453.85 USD <sup class="text-danger">*</sup>
+                                                12 <sup class="text-danger">*</sup>
                                             </div>
                                             <div class="text-muted">
-                                                Total Money Transfered </div>
+                                                Total Application </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-xl-3 mb-3">
+                            <div class="card card-sm">
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                            <span class="text-white avatar">
+                                                <img src="{{url('assets/students/img/graduation.png')}}" />
+                                            </span>
+                                        </div>
+                                        <div class="col">
+                                            <div class="font-weight-medium">
+                                                2 <sup class="text-danger">*</sup>
+                                            </div>
+                                            <div class="text-muted">
+                                                Total Universities </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-6 col-xl-3 mb-3">
+                            <div class="card card-sm">
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                            <span class="text-white avatar">
+                                                <img src="{{url('assets/students/img/course.png')}}" />
+                                            </span>
+                                        </div>
+                                        <div class="col">
+                                            <div class="font-weight-medium">
+                                                4 <sup class="text-danger">*</sup>
+                                            </div>
+                                            <div class="text-muted">
+                                                Total Courses </div>
                                         </div>
                                     </div>
                                 </div>
@@ -77,88 +108,16 @@
                                 <div class="card-body">
                                     <div class="row align-items-center">
                                         <div class="col-auto">
-                                            <span class="bg-success text-white avatar">
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    class="icon icon-tabler icon-tabler-currency-dogecoin"
-                                                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
-                                                    stroke="currentColor" fill="none" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                    <path d="M6 12h6"></path>
-                                                    <path d="M9 6v12"></path>
-                                                    <path d="M6 18h6a6 6 0 1 0 0 -12h-6"></path>
-                                                </svg>
+                                            <span class="text-white avatar">
+                                                <img src="{{url('assets/students/img/contact.png')}}" />
                                             </span>
                                         </div>
                                         <div class="col">
                                             <div class="font-weight-medium">
-                                                8,177.44 USD <sup class="text-danger">*</sup>
+                                                1 <sup class="text-danger">*</sup>
                                             </div>
                                             <div class="text-muted">
-                                                Total Deposit </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-xl-3 mb-3">
-                            <div class="card card-sm">
-                                <div class="card-body">
-                                    <div class="row align-items-center">
-                                        <div class="col-auto">
-                                            <span class="bg-warning text-white avatar">
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    class="icon icon-tabler icon-tabler-copy" width="24"
-                                                    height="24" viewBox="0 0 24 24" stroke-width="2"
-                                                    stroke="currentColor" fill="none" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                    <rect x="8" y="8" width="12" height="12" rx="2">
-                                                    </rect>
-                                                    <path
-                                                        d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2">
-                                                    </path>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                        <div class="col">
-                                            <div class="font-weight-medium">
-                                                0.00 USD <sup class="text-danger">*</sup>
-                                            </div>
-                                            <div class="text-muted">
-                                                Total Withdraw </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-xl-3 mb-3">
-                            <div class="card card-sm">
-                                <div class="card-body">
-                                    <div class="row align-items-center">
-                                        <div class="col-auto">
-                                            <span class="bg-info text-white avatar">
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    class="icon icon-tabler icon-tabler-arrows-right-left"
-                                                    width="24" height="24" viewBox="0 0 24 24"
-                                                    stroke-width="2" stroke="currentColor" fill="none"
-                                                    stroke-linecap="round" stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                    <line x1="21" y1="7" x2="3"
-                                                        y2="7"></line>
-                                                    <path d="M18 10l3 -3l-3 -3"></path>
-                                                    <path d="M6 20l-3 -3l3 -3"></path>
-                                                    <line x1="3" y1="17" x2="21"
-                                                        y2="17"></line>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                        <div class="col">
-                                            <div class="font-weight-medium">
-                                                19,152.55 USD <sup class="text-danger">*</sup>
-                                            </div>
-                                            <div class="text-muted">
-                                                Total Exchange </div>
+                                                Contact Us </div>
                                         </div>
                                     </div>
                                 </div>
