@@ -73,7 +73,7 @@
                                         </div>
                                         <div class="col">
                                             <div class="font-weight-medium">
-                                                2 <sup class="text-danger">*</sup>
+                                                {{$totalUniversity}}
                                             </div>
                                             <div class="text-muted">
                                                 Total Universities </div>
@@ -94,7 +94,7 @@
                                         </div>
                                         <div class="col">
                                             <div class="font-weight-medium">
-                                                4 <sup class="text-danger">*</sup>
+                                                {{$totalCourses}}
                                             </div>
                                             <div class="text-muted">
                                                 Total Courses </div>
