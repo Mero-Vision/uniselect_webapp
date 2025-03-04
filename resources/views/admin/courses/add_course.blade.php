@@ -186,11 +186,14 @@
                                                 <div id="div_editor1" class="richtexteditor">
                                                 </div>
                                                 @error('description')
-                                                <p class="text-danger">{{ $message }}</p>
-                                            @enderror
+                                                    <p class="text-danger">{{ $message }}</p>
+                                                @enderror
                                             </div>
                                         </div>
                                     </div>
+
+
+
 
                                 </div>
                             </div>
@@ -199,7 +202,247 @@
 
 
 
+                            <div class="row row-deck row-cards">
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <h3 class="text-center p-2">IELTS</h3>
+                                        <div class="card-body">
+                                           
+                                                <div class="row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <div class="form-label">Min IELTS Reading</div>
+                                                        <input type="number" name="min_ielts_reading"
+                                                            
+                                                            class="form-control amount shadow-none" min="0" max="10" required>
+                                                        @error('min_ielts_reading')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <div class="form-label">Min IELTS Writing</div>
+                                                        <input type="number" name="min_ielts_writing"
+                                                           
+                                                            class="form-control amount shadow-none" min="0" max="10" required>
+                                                        @error('min_ielts_writing')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <div class="form-label">Min IELTS Listening</div>
+                                                        <input type="number" name="min_ielts_listening"
+                                                          
+                                                            class="form-control amount shadow-none" min="0" max="10" required>
+                                                        @error('min_ielts_listening')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <div class="form-label">Min IELTS Speaking</div>
+                                                        <input type="number" name="min_ielts_speaking"
+                                                         
+                                                            class="form-control amount shadow-none" min="0" max="10" required>
+                                                        @error('min_ielts_speaking')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-12 mb-3">
+                                                        <div class="form-label">IELTS Overall</div>
+                                                        <input type="number" name="min_ielts_overall"
+                                                           
+                                                            class="form-control amount shadow-none" min="0" max="10" required>
+                                                        @error('min_ielts_overall')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+                                                  
+                                                </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
 
+
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <h3 class="text-center p-2">PTE</h3>
+                                        <div class="card-body">
+                                         
+                                                <div class="row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <div class="form-label">Min PTE Reading</div>
+                                                        <input type="number" name="min_pte_reading"
+                                                           
+                                                            class="form-control amount shadow-none" min="0" max="10" required>
+                                                        @error('min_pte_reading')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <div class="form-label">Min PTE Writing</div>
+                                                        <input type="number" name="min_pte_writing"
+                                                           
+                                                            class="form-control amount shadow-none" min="0" max="10" required>
+                                                        @error('min_pte_writing')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <div class="form-label">Min PTE Listening</div>
+                                                        <input type="number" name="min_pte_listening"
+                                                           
+                                                            class="form-control amount shadow-none" min="0" max="10" required>
+                                                        @error('min_pte_listening')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <div class="form-label">Min PTE Speaking</div>
+                                                        <input type="number" name="min_pte_speaking"
+                                                          
+                                                            class="form-control amount shadow-none" min="0" max="10" required>
+                                                        @error('min_pte_speaking')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-12 mb-3">
+                                                        <div class="form-label">Min PTE Overall</div>
+                                                        <input type="number" name="min_pte_overall"
+                                                           
+                                                            class="form-control amount shadow-none" min="0" max="10" required>
+                                                        @error('min_pte_overall')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+
+                                                   
+                                                </div>
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <h3 class="text-center p-2">SAT</h3>
+                                        <div class="card-body">
+                                          
+                                                <div class="row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <div class="form-label">Min SAT Reading</div>
+                                                        <input type="number" name="min_sat_reading"
+                                                          
+                                                            class="form-control amount shadow-none"  min="0" max="10" required>
+                                                        @error('min_sat_reading')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <div class="form-label">Min SAT Writing</div>
+                                                        <input type="number" name="min_sat_writing"
+                                                           
+                                                            class="form-control amount shadow-none" min="0" max="10" required>
+                                                        @error('min_sat_writing')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <div class="form-label">Min SAT Listening</div>
+                                                        <input type="number" name="min_sat_listening"
+                                                           
+                                                            class="form-control amount shadow-none" min="0" max="10" required>
+                                                        @error('min_sat_listening')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <div class="form-label">Min SAT Speaking</div>
+                                                        <input type="number" name="min_sat_speaking"
+                                                           
+                                                            class="form-control amount shadow-none" min="0" max="10" required>
+                                                        @error('min_sat_speaking')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-12 mb-3">
+                                                        <div class="form-label">Min PTE Overall</div>
+                                                        <input type="number" name="min_sat_overall"
+                                                           
+                                                            class="form-control amount shadow-none"  min="0" max="10" required>
+                                                        @error('min_sat_overall')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+
+                                                  
+                                                </div>
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <h3 class="text-center p-2">TOEFL</h3>
+                                        <div class="card-body">
+                                          
+                                                <div class="row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <div class="form-label">Min TOEFL Reading</div>
+                                                        <input type="number" name="min_toefl_reading"
+                                                            
+                                                            class="form-control amount shadow-none" min="0" max="10" required>
+                                                        @error('min_toefl_reading')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <div class="form-label">Min TOEFL Writing</div>
+                                                        <input type="number" name="min_toefl_writing"
+                                                           
+                                                            class="form-control amount shadow-none" min="0" max="10" required>
+                                                        @error('min_toefl_writing')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <div class="form-label">Min TOEFL Listening</div>
+                                                        <input type="number" name="min_toefl_listening"
+                                                            
+                                                            class="form-control amount shadow-none" min="0" max="10" required>
+                                                        @error('min_toefl_listening')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <div class="form-label">Min TOEFL Speaking</div>
+                                                        <input type="number" name="min_toefl_speaking"
+                                                            
+                                                            class="form-control amount shadow-none" min="0" max="10" required>
+                                                        @error('min_toefl_speaking')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-12 mb-3">
+                                                        <div class="form-label">Min TOEFL Overall</div>
+                                                        <input type="number" name="min_toefl_overall"
+                                                            
+                                                            class="form-control amount shadow-none" min="0" max="10" required>
+                                                        @error('min_toefl_overall')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+
+                                                 
+                                                </div>
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
 
 
 

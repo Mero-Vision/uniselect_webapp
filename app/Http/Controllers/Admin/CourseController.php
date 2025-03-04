@@ -39,6 +39,34 @@ class CourseController extends Controller
                     'tuition_fees' => $request->tuition_fees,
                     'application_fees' => $request->application_fees,
 
+                    // IELTS Scores
+                    'min_ielts_reading' => $request->min_ielts_reading,
+                    'min_ielts_writing' => $request->min_ielts_writing,
+                    'min_ielts_listening' => $request->min_ielts_listening,
+                    'min_ielts_speaking' => $request->min_ielts_speaking,
+                    'min_ielts_overall' => $request->min_ielts_overall,
+
+                    // PTE Scores
+                    'min_pte_reading' => $request->min_pte_reading,
+                    'min_pte_writing' => $request->min_pte_writing,
+                    'min_pte_listening' => $request->min_pte_listening,
+                    'min_pte_speaking' => $request->min_pte_speaking,
+                    'min_pte_overall' => $request->min_pte_overall,
+
+                    // SAT Scores
+                    'min_sat_reading' => $request->min_sat_reading,
+                    'min_sat_writing' => $request->min_sat_writing,
+                    'min_sat_listening' => $request->min_sat_listening,
+                    'min_sat_speaking' => $request->min_sat_speaking,
+                    'min_sat_overall' => $request->min_sat_overall,
+
+                    // TOEFL Scores
+                    'min_toefl_reading' => $request->min_toefl_reading,
+                    'min_toefl_writing' => $request->min_toefl_writing,
+                    'min_toefl_listening' => $request->min_toefl_listening,
+                    'min_toefl_speaking' => $request->min_toefl_speaking,
+                    'min_toefl_overall' => $request->min_toefl_overall,
+
                 ]);
 
                 if ($request->course_image) {

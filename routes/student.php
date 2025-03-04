@@ -4,6 +4,7 @@ use App\Http\Controllers\Students\AuthController;
 use App\Http\Controllers\Students\CourseRecommendationController;
 use App\Http\Controllers\Students\HomeController;
 use App\Http\Controllers\Students\StudentController;
+use App\Http\Controllers\Students\StudentTestScoreController;
 use App\Http\Controllers\Students\UniversityController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,7 +20,13 @@ Route::middleware(['auth'])->group(function () {
     Route::get('university',[UniversityController::class,'index']);
     Route::get('university/{slug}',[UniversityController::class,'show']);
 
+    Route::get('test-scores',[StudentTestScoreController::class,'index']);
+    Route::post('test-scores',[StudentTestScoreController::class,'store']);
+
+
     Route::get('course-recommendation',[CourseRecommendationController::class,'index']);
+
+    
 
 
 

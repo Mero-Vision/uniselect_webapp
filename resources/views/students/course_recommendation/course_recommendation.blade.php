@@ -24,8 +24,8 @@
                             <div class="col d-flex align-items-center justify-content-between flex-wrap">
                                 <!-- Page Title -->
                                 <h2 class="page-title me-3 mb-0">Recommended Courses</h2>
-                            
-                                
+
+
                                 {{-- <form action="guardians.html" class="d-flex align-items-center">
                                    
                                     <div class="d-flex align-items-center me-3">
@@ -53,7 +53,7 @@
                                     </div>
                                 </form> --}}
                             </div>
-                            
+
                         </div>
 
                         <!-- Page title actions -->
@@ -69,48 +69,78 @@
                 <div class="container-xl">
                     <div class="row mb-3">
                         @forelse ($recommendedCourses as $data)
-                            <div class="col-sm-6 col-xl-3 mb-3">
+                            <div class="col-sm-6 col-xl-4 mb-3">
                                 <div class="card card-sm">
                                     <div class="card-body">
-                                        <div class="row align-items-center">
+                                        <div class="row align-items-center mb-4">
+                                            <!-- Course Image -->
                                             <div class="col-auto">
-                                                <span class="text-white" style="width: 450px">
-                                                    <img src="{{ $data->getFirstMediaUrl('university_image') }}" />
-                                                </span>
-                                            </div>
-                                            <div class="col">
-                                                <div class="font-weight-medium">
-                                                    <a
-                                                        href="{{ url('student/university') }}/{{ $data->slug }}">{{ $data->name }}</a>
+                                                <div class="course-image-wrapper" style="width: 150px; height: 150px; overflow: hidden; border-radius: 8px;">
+                                                    <img src="{{ $data->getFirstMediaUrl('course_image') }}" 
+                                                         alt="{{ $data->name }}" 
+                                                         class="img-fluid" 
+                                                         style="width: 100%; height: 100%; object-fit: cover;">
                                                 </div>
-                                                <div class="text-muted">
-                                                    Country: {{ $data->country->name }} </div>
+                                            </div>
+                                        
+                                            <!-- Course Details -->
+                                            <div class="col">
+                                                <!-- Course Name -->
+                                                <div class="mb-2">
+                                                    <a href="{{ url('student/university') }}/{{ $data->slug }}" 
+                                                       class="text-decoration-none">
+                                                        <h3 class="h5 font-weight-bold text-dark mb-0">
+                                                            {{ $data->name }}
+                                                        </h3>
+                                                    </a>
+                                                </div>
+                                        
+                                                <!-- Program Level -->
+                                                <div class="mb-2">
+                                                    <span class="badge bg-primary text-white font-weight-normal">
+                                                        Program Level: {{ $data->program_level }}
+                                                    </span>
+                                                </div>
+                                        
+                                                <!-- Course Description -->
+                                                <div class="text-muted mb-2">
+                                                    {{ Str::limit(strip_tags($data->description), 100, '...') }}
+                                                </div>
+                                        
+                                                <!-- Call-to-Action Button -->
+                                                <div>
+                                                    <a href="{{ url('student/university') }}/{{ $data->slug }}" 
+                                                       class="btn btn-outline-primary btn-sm">
+                                                        View Course Details
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        @empty
-                            <div>
-                                <img src="{{ url('assets/admin/img/no-data.png') }}" class="img-fluid d-block mx-auto"
-                                    style="width: 200px" />
-                                <p class="text-center">No Recommendation Found!</p>
-                                <p class="text-center text-danger">{{$warningMessage}}</p>
-
-                            </div>
-                        @endforelse
-
-
-
+                    </div>
+                @empty
+                    <div>
+                        <img src="{{ url('assets/admin/img/no-data.png') }}" class="img-fluid d-block mx-auto"
+                            style="width: 200px" />
+                        <p class="text-center">No Recommendation Found!</p>
+                        <p class="text-center text-danger">{{ $warningMessage }}</p>
 
                     </div>
+                    @endforelse
+
+
 
 
                 </div>
 
 
             </div>
+
+
         </div>
+    </div>
     </div>
 
 

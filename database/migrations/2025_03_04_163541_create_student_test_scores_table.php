@@ -14,10 +14,33 @@ return new class extends Migration
         Schema::create('student_test_scores', function (Blueprint $table) {
             $table->id();
             $table->foreignId('student_id');
-            $table->integer('ielts')->nullable();
-            $table->integer('pte')->nullable();
-            $table->integer('sat')->nullable();
-            $table->integer('toefl')->nullable();
+            // IELTS Scores
+            $table->float('ielts_reading')->nullable();
+            $table->float('ielts_writing')->nullable();
+            $table->float('ielts_listening')->nullable();
+            $table->float('ielts_speaking')->nullable();
+            $table->float('ielts_overall')->nullable(); // Overall IELTS Score
+
+            // PTE Scores
+            $table->integer('pte_reading')->nullable();
+            $table->integer('pte_writing')->nullable();
+            $table->integer('pte_listening')->nullable();
+            $table->integer('pte_speaking')->nullable();
+            $table->integer('pte_overall')->nullable(); // Overall PTE Score
+
+            // SAT Scores
+            $table->integer('sat_reading')->nullable();
+            $table->integer('sat_writing')->nullable();
+            $table->integer('sat_listening')->nullable();
+            $table->integer('sat_speaking')->nullable();
+            $table->integer('sat_overall')->nullable(); // Overall SAT Score
+
+            // TOEFL Scores
+            $table->integer('toefl_reading')->nullable();
+            $table->integer('toefl_writing')->nullable();
+            $table->integer('toefl_listening')->nullable();
+            $table->integer('toefl_speaking')->nullable();
+            $table->integer('toefl_overall')->nullable(); // Overall TOEFL Score
             $table->timestamps();
         });
     }

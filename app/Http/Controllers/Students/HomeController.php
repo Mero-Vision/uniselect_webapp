@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Students;
 use App\Http\Controllers\Controller;
 use App\Models\Course;
 use App\Models\University;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -13,6 +15,13 @@ class HomeController extends Controller
 
         $totalUniversity=University::count();
         $totalCourses=Course::count();
-        return view('students.home.home',compact('totalUniversity','totalCourses'));
+
+        $student = User::role(User::STUDENT)->with('testScores')->find(Auth::user()->id);
+        $recommendedCourses = [];
+        $warningMessage=null;
+        if (!$student || !$student->testScores){
+            $warningMessage = 'Test scores not found. Please update your test scores to get course recommendations.';
+        }
+        return view('students.home.home',compact('totalUniversity','totalCourses','warningMessage'));
     }
 }

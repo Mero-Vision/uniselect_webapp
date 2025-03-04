@@ -21,8 +21,8 @@
                     <div class="row align-items-center">
                         <div class="col-12 mb-3">
                             <div class="p-2 rounded-3 review">
-                                <h4 class="text-dark kyc__text text-center"><i class="fas fa-search-location"></i>
-                                    Your KYC data is currently under reviewing.</h4>
+                                <h4 class="kyc__text text-center text-danger">
+                                    {{$warningMessage}}</h4>
                             </div>
                         </div>
                         <div class="col">

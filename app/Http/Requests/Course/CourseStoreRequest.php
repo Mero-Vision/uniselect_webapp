@@ -29,7 +29,35 @@ class CourseStoreRequest extends FormRequest
             'course_duration'  => 'required|integer|min:1',
             'tuition_fees'     => 'required|numeric|min:0',
             'application_fees' => 'nullable|numeric|min:0',
-            'course_image' => ['required', 'image']
+            'course_image' => ['required', 'image'],
+
+            // IELTS Scores
+            'min_ielts_reading' => 'nullable|numeric|min:0|max:10',
+            'min_ielts_writing' => 'nullable|numeric|min:0|max:10',
+            'min_ielts_listening' => 'nullable|numeric|min:0|max:10',
+            'min_ielts_speaking' => 'nullable|numeric|min:0|max:910',
+            'min_ielts_overall' => 'nullable|numeric|min:0|max:10',
+
+            // PTE Scores
+            'min_pte_reading' => 'nullable|integer|min:0|max:10',
+            'min_pte_writing' => 'nullable|integer|min:0|max:10',
+            'min_pte_listening' => 'nullable|integer|min:0|max:10',
+            'min_pte_speaking' => 'nullable|integer|min:0|max:10',
+            'min_pte_overall' => 'nullable|integer|min:0|max:10',
+
+            // SAT Scores
+            'min_sat_reading' => 'nullable|integer|min:0|max:10',
+            'min_sat_writing' => 'nullable|integer|min:0|max:10',
+            'min_sat_listening' => 'nullable|integer|min:0|max:10',
+            'min_sat_speaking' => 'nullable|integer|min:0|max:10',
+            'min_sat_overall' => 'nullable|integer|min:0|max:10',
+
+            // TOEFL Scores
+            'min_toefl_reading' => 'nullable|integer|min:0|max:10',
+            'min_toefl_writing' => 'nullable|integer|min:0|max:10',
+            'min_toefl_listening' => 'nullable|integer|min:0|max:10',
+            'min_toefl_speaking' => 'nullable|integer|min:0|max:10',
+            'min_toefl_overall' => 'nullable|integer|min:0|max:10',
         ];
     }
 }
