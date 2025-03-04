@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Students\AuthController;
+use App\Http\Controllers\Students\CourseRecommendationController;
 use App\Http\Controllers\Students\HomeController;
 use App\Http\Controllers\Students\StudentController;
 use App\Http\Controllers\Students\UniversityController;
@@ -17,6 +18,9 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('university',[UniversityController::class,'index']);
     Route::get('university/{slug}',[UniversityController::class,'show']);
+
+    Route::get('course-recommendation',[CourseRecommendationController::class,'index']);
+
 
 
 

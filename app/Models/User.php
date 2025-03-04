@@ -21,7 +21,10 @@ class User extends Authenticatable implements HasMedia
     const ADMIN = 'admin';
 
 
-
+    public function testScores()
+    {
+        return $this->hasOne(StudentTestScore::class,'student_id');
+    }
 
     protected $guarded = ['id'];
 

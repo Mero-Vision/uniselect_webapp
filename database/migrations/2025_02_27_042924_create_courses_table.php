@@ -21,6 +21,10 @@ return new class extends Migration
             $table->float('tuition_fees')->nullable();
             $table->float('application_fees')->nullable();
             $table->longText('description')->nullable();
+            $table->integer('min_ielts')->nullable();
+            $table->integer('min_pte')->nullable();
+            $table->integer('min_sat')->nullable();
+            $table->integer('min_toefl')->nullable();
             $table->timestamps();
         });
     }
