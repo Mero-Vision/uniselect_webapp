@@ -123,7 +123,7 @@
                             <div>
                                 <img src="{{ url('assets/admin/img/no-data.png') }}" class="img-fluid d-block mx-auto"
                                     style="width: 200px" />
-                                <p class="text-center">No Recommendation Found!</p>
+                                <p class="text-center">No Courses Found!</p>
 
                             </div>
                         @endforelse
