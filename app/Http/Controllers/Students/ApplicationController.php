@@ -12,6 +12,10 @@ class ApplicationController extends Controller
 {
     public function store(Request $request)
     {
+        $request->validate([
+            'university_id'=>['required'],
+            'course_id'=>['required']
+        ]);
         try {
 
             $application = DB::transaction(function () use ($request) {

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Students;
 
 use App\Http\Controllers\Controller;
+use App\Models\Application;
 use App\Models\Course;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -14,7 +15,7 @@ class CourseRecommendationController extends Controller
     {
         $student = User::role(User::STUDENT)->with('testScores')->find(Auth::user()->id);
         $recommendedCourses = [];
-        $warningMessage=null;
+        $warningMessage = null;
         if (!$student || !$student->testScores) {
             $warningMessage = 'Test scores not found. Please update your test scores to get course recommendations.';
             return view('students.course_recommendation.course_recommendation', compact('recommendedCourses', 'warningMessage'));
@@ -57,9 +58,9 @@ class CourseRecommendationController extends Controller
                 });
         })->get();
 
+        $appliedCourses = Application::where('student_id', Auth::user()->id)->pluck('course_id')->toArray();
 
-        return view('students.course_recommendation.course_recommendation', compact('recommendedCourses', 'student','warningMessage'));
+
+        return view('students.course_recommendation.course_recommendation', compact('recommendedCourses', 'student', 'warningMessage', 'appliedCourses'));
     }
-
-    
 }

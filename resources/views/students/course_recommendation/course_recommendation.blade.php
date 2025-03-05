@@ -69,10 +69,10 @@
                 <div class="container-xl">
                     <div class="row mb-3">
                         @forelse ($recommendedCourses as $data)
-                            <div class="col-sm-6 col-xl-4 mb-3">
+                            <div class="col-sm-6 col-xl-4">
                                 <div class="card card-sm">
                                     <div class="card-body">
-                                        <div class="row align-items-center mb-4">
+                                        <div class="row align-items-center">
                                             <!-- Course Image -->
                                             <div class="col-auto">
                                                 <div class="course-image-wrapper"
@@ -109,10 +109,22 @@
 
                                                 <!-- Call-to-Action Button -->
                                                 <div>
-                                                    <a href="{{ url('student/university') }}/{{ $data->slug }}"
-                                                        class="btn btn-outline-primary btn-sm bg-primary text-light">
-                                                        Apply Course
-                                                    </a>
+                                                    @if (in_array($data->id, $appliedCourses))
+                                                        <button class="btn btn-success btn-sm" disabled>Applied</button>
+                                                    @else
+                                                        <form action="{{ url('student/applications') }}" method="POST">
+                                                            @csrf
+                                                            <input type="hidden" value="{{ $data->university_id }}"
+                                                                name="university_id" />
+                                                            <input type="hidden" value="{{ $data->id }}"
+                                                                name="course_id" />
+                                                            <button type="submit"
+                                                                class="btn btn-outline-primary btn-sm bg-primary text-light">
+                                                                Apply Course
+                                                            </button>
+                                                        </form>
+                                                    @endif
+
                                                 </div>
                                             </div>
                                         </div>
