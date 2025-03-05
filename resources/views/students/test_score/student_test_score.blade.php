@@ -44,7 +44,7 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="form-label">IELTS Reading</div>
                                                 <input type="number" name="ielts_reading"
-                                                    value="{{ $studentTestScore->ielts_reading }}"
+                                                    value="{{ $studentTestScore->ielts_reading??null }}"
                                                     class="form-control amount shadow-none" required>
                                                 @error('ielts_reading')
                                                     <p class="text-danger">{{ $message }}</p>
