@@ -23,6 +23,16 @@
                         </a>
                     </li>
 
+                    <li class="nav-item {{request()->is('student/courses')?'active':''}}">
+                        <a class="nav-link" href="{{url('student/courses')}}">
+                            <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                <i class="fas fa-home"></i>
+                            </span>
+                            <span class="nav-link-title">
+                                Courses </span>
+                        </a>
+                    </li>
+
                     <li class="nav-item {{request()->is('student/course-recommendation')?'active':''}}">
                         <a class="nav-link" href="{{url('student/course-recommendation')}}">
                             <span class="nav-link-icon d-md-none d-lg-inline-block">

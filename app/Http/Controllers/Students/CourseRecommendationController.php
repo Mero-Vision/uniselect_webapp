@@ -60,4 +60,6 @@ class CourseRecommendationController extends Controller
 
         return view('students.course_recommendation.course_recommendation', compact('recommendedCourses', 'student','warningMessage'));
     }
+
+    
 }

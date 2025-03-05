@@ -68,8 +68,8 @@
             <div class="page-body">
                 <div class="container-xl">
                     <div class="row mb-3">
-                        @forelse ($recommendedCourses as $data)
-                            <div class="col-sm-6 col-xl-4 mb-3">
+                        @forelse ($courses as $data)
+                            <div class="col-md-4">
                                 <div class="card card-sm">
                                     <div class="card-body">
                                         <div class="row align-items-center mb-4">
@@ -87,7 +87,7 @@
                                             <div class="col">
                                                 <!-- Course Name -->
                                                 <div class="mb-2">
-                                                    <a href="{{ url('student/university') }}/{{ $data->slug }}"
+                                                    <a href="{{ url('student/courses') }}/{{ $data->slug }}"
                                                         class="text-decoration-none">
                                                         <h3 class="h5 font-weight-bold text-dark mb-0">
                                                             {{ $data->name }}
@@ -109,9 +109,9 @@
 
                                                 <!-- Call-to-Action Button -->
                                                 <div>
-                                                    <a href="{{ url('student/university') }}/{{ $data->slug }}"
-                                                        class="btn btn-outline-primary btn-sm bg-primary text-light">
-                                                        Apply Course
+                                                    <a href="{{ url('student/courses') }}/{{ $data->slug }}"
+                                                        class="btn btn-outline-primary btn-sm">
+                                                        View Course Details
                                                     </a>
                                                 </div>
                                             </div>
@@ -119,7 +119,6 @@
                                     </div>
                                 </div>
                             </div>
-
                         @empty
                             <div>
                                 <img src="{{ url('assets/admin/img/no-data.png') }}" class="img-fluid d-block mx-auto"
@@ -129,19 +128,21 @@
 
                             </div>
                         @endforelse
-
-
-
-
                     </div>
+
+
+
 
 
                 </div>
 
 
             </div>
+
+
         </div>
     </div>
+
 
 
     <script src="{{ url('assets/students/js/jquery.min.js') }}"></script>
