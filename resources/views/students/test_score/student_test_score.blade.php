@@ -53,7 +53,7 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="form-label">IELTS Writing</div>
                                                 <input type="number" name="ielts_writing"
-                                                    value="{{ $studentTestScore->ielts_writing }}"
+                                                    value="{{ $studentTestScore->ielts_writing??null }}"
                                                     class="form-control amount shadow-none" required>
                                                 @error('ielts_writing')
                                                     <p class="text-danger">{{ $message }}</p>
@@ -62,7 +62,7 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="form-label">IELTS Listening</div>
                                                 <input type="number" name="ielts_listening"
-                                                    value="{{ $studentTestScore->ielts_listening }}"
+                                                    value="{{ $studentTestScore->ielts_listening??null }}"
                                                     class="form-control amount shadow-none" required>
                                                 @error('ielts_listening')
                                                     <p class="text-danger">{{ $message }}</p>
@@ -71,7 +71,7 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="form-label">IELTS Speaking</div>
                                                 <input type="number" name="ielts_speaking"
-                                                    value="{{ $studentTestScore->ielts_speaking }}"
+                                                    value="{{ $studentTestScore->ielts_speaking??null }}"
                                                     class="form-control amount shadow-none" required>
                                                 @error('ielts_speaking')
                                                     <p class="text-danger">{{ $message }}</p>
@@ -80,7 +80,7 @@
                                             <div class="col-md-12 mb-3">
                                                 <div class="form-label">IELTS Overall</div>
                                                 <input type="number" name="ielts_overall"
-                                                    value="{{ $studentTestScore->ielts_overall }}"
+                                                    value="{{ $studentTestScore->ielts_overall??null }}"
                                                     class="form-control amount shadow-none" required>
                                                 @error('ielts_overall')
                                                     <p class="text-danger">{{ $message }}</p>
@@ -110,7 +110,7 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="form-label">PTE Reading</div>
                                                 <input type="number" name="pte_reading"
-                                                    value="{{ $studentTestScore->pte_reading }}"
+                                                    value="{{ $studentTestScore->pte_reading??null }}"
                                                     class="form-control amount shadow-none" required>
                                                 @error('pte_reading')
                                                     <p class="text-danger">{{ $message }}</p>
@@ -119,7 +119,7 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="form-label">PTE Writing</div>
                                                 <input type="number" name="pte_writing"
-                                                    value="{{ $studentTestScore->pte_writing }}"
+                                                    value="{{ $studentTestScore->pte_writing ??null}}"
                                                     class="form-control amount shadow-none" required>
                                                 @error('pte_writing')
                                                     <p class="text-danger">{{ $message }}</p>
@@ -128,7 +128,7 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="form-label">PTE Listening</div>
                                                 <input type="number" name="pte_listening"
-                                                    value="{{ $studentTestScore->pte_listening }}"
+                                                    value="{{ $studentTestScore->pte_listening??null }}"
                                                     class="form-control amount shadow-none" required>
                                                 @error('pte_listening')
                                                     <p class="text-danger">{{ $message }}</p>
@@ -137,7 +137,7 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="form-label">PTE Speaking</div>
                                                 <input type="number" name="pte_speaking"
-                                                    value="{{ $studentTestScore->pte_speaking }}"
+                                                    value="{{ $studentTestScore->pte_speaking??null }}"
                                                     class="form-control amount shadow-none" required>
                                                 @error('pte_speaking')
                                                     <p class="text-danger">{{ $message }}</p>
@@ -146,7 +146,7 @@
                                             <div class="col-md-12 mb-3">
                                                 <div class="form-label">PTE Overall</div>
                                                 <input type="number" name="pte_overall"
-                                                    value="{{ $studentTestScore->pte_overall }}"
+                                                    value="{{ $studentTestScore->pte_overall ??null}}"
                                                     class="form-control amount shadow-none" required>
                                                 @error('pte_overall')
                                                     <p class="text-danger">{{ $message }}</p>
@@ -176,7 +176,7 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="form-label">SAT Reading</div>
                                                 <input type="number" name="sat_reading"
-                                                    value="{{ $studentTestScore->sat_reading }}"
+                                                    value="{{ $studentTestScore->sat_reading??null }}"
                                                     class="form-control amount shadow-none" required>
                                                 @error('sat_reading')
                                                     <p class="text-danger">{{ $message }}</p>
@@ -185,7 +185,7 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="form-label">SAT Writing</div>
                                                 <input type="number" name="sat_writing"
-                                                    value="{{ $studentTestScore->sat_writing }}"
+                                                    value="{{ $studentTestScore->sat_writing??null }}"
                                                     class="form-control amount shadow-none" required>
                                                 @error('sat_writing')
                                                     <p class="text-danger">{{ $message }}</p>
@@ -194,7 +194,7 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="form-label">SAT Listening</div>
                                                 <input type="number" name="sat_listening"
-                                                    value="{{ $studentTestScore->sat_listening }}"
+                                                    value="{{ $studentTestScore->sat_listening??null }}"
                                                     class="form-control amount shadow-none" required>
                                                 @error('sat_listening')
                                                     <p class="text-danger">{{ $message }}</p>
@@ -203,7 +203,7 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="form-label">SAT Speaking</div>
                                                 <input type="number" name="sat_speaking"
-                                                    value="{{ $studentTestScore->sat_speaking }}"
+                                                    value="{{ $studentTestScore->sat_speaking??null }}"
                                                     class="form-control amount shadow-none" required>
                                                 @error('sat_speaking')
                                                     <p class="text-danger">{{ $message }}</p>
@@ -212,7 +212,7 @@
                                             <div class="col-md-12 mb-3">
                                                 <div class="form-label">PTE Overall</div>
                                                 <input type="number" name="sat_overall"
-                                                    value="{{ $studentTestScore->sat_overall }}"
+                                                    value="{{ $studentTestScore->sat_overall??null }}"
                                                     class="form-control amount shadow-none" required>
                                                 @error('sat_overall')
                                                     <p class="text-danger">{{ $message }}</p>
@@ -242,7 +242,7 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="form-label">TOEFL Reading</div>
                                                 <input type="number" name="toefl_reading"
-                                                    value="{{ $studentTestScore->toefl_reading }}"
+                                                    value="{{ $studentTestScore->toefl_reading??null }}"
                                                     class="form-control amount shadow-none" required>
                                                 @error('toefl_reading')
                                                     <p class="text-danger">{{ $message }}</p>
@@ -251,7 +251,7 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="form-label">TOEFL Writing</div>
                                                 <input type="number" name="toefl_writing"
-                                                    value="{{ $studentTestScore->toefl_writing }}"
+                                                    value="{{ $studentTestScore->toefl_writing ??null}}"
                                                     class="form-control amount shadow-none" required>
                                                 @error('toefl_writing')
                                                     <p class="text-danger">{{ $message }}</p>
@@ -260,7 +260,7 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="form-label">TOEFL Listening</div>
                                                 <input type="number" name="toefl_listening"
-                                                    value="{{ $studentTestScore->toefl_listening }}"
+                                                    value="{{ $studentTestScore->toefl_listening??null }}"
                                                     class="form-control amount shadow-none" required>
                                                 @error('toefl_listening')
                                                     <p class="text-danger">{{ $message }}</p>
@@ -269,7 +269,7 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="form-label">TOEFL Speaking</div>
                                                 <input type="number" name="toefl_speaking"
-                                                    value="{{ $studentTestScore->toefl_speaking }}"
+                                                    value="{{ $studentTestScore->toefl_speaking??null }}"
                                                     class="form-control amount shadow-none" required>
                                                 @error('toefl_speaking')
                                                     <p class="text-danger">{{ $message }}</p>
@@ -278,7 +278,7 @@
                                             <div class="col-md-12 mb-3">
                                                 <div class="form-label">TOEFL Overall</div>
                                                 <input type="number" name="toefl_overall"
-                                                    value="{{ $studentTestScore->toefl_overall }}"
+                                                    value="{{ $studentTestScore->toefl_overall??null }}"
                                                     class="form-control amount shadow-none" required>
                                                 @error('toefl_overall')
                                                     <p class="text-danger">{{ $message }}</p>
