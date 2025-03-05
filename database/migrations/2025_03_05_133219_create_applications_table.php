@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('student_id')->nullable();
             $table->foreignId('university_id')->nullable();
             $table->foreignId('course_id')->nullable();
+            $table->string('document_status')->default('pending');
             $table->string('application_status')->default('pending');
             $table->timestamps();
         });
