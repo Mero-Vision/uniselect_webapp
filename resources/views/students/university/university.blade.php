@@ -37,7 +37,7 @@
                     <div class="row mb-3">
                         @forelse ($universities as $data)
                             <div class="col-sm-6 col-xl-4 mb-3">
-                                <div class="card card-sm" style="height: 250px">
+                                <div class="card card-sm" style="height: 150px">
                                     <div class="card-body">
                                         <div class="row align-items-center">
                                             <div class="col-auto">
