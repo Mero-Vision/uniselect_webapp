@@ -36,13 +36,13 @@
                 <div class="container-xl">
                     <div class="row mb-3">
                         @forelse ($universities as $data)
-                            <div class="col-sm-6 col-xl-3 mb-3">
+                            <div class="col-sm-6 col-xl-4 mb-3">
                                 <div class="card card-sm">
                                     <div class="card-body">
                                         <div class="row align-items-center">
                                             <div class="col-auto">
                                                 <span class="text-white" style="width: 450px">
-                                                    <img src="{{ $data->getFirstMediaUrl('university_image') }}" />
+                                                    <img src="{{ $data->getFirstMediaUrl('university_image') }}" style="width: 200px" />
                                                 </span>
                                             </div>
                                             <div class="col">
