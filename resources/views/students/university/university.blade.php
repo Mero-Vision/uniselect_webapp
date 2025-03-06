@@ -36,28 +36,20 @@
                 <div class="container-xl">
                     <div class="row mb-3">
                         @forelse ($universities as $data)
-                            <div class="col-sm-6 col-xl-4 mb-3">
-                                <div class="card card-sm" style="height: 150px">
-                                    <div class="card-body">
-                                        <div class="row align-items-center">
-                                            <div class="col-auto">
-                                                <span class="text-white" style="width: 450px">
-                                                    <img src="{{ $data->getFirstMediaUrl('university_image') }}" style="width: 200px" />
-                                                </span>
-                                            </div>
-                                            <div class="col">
-                                                <div class="font-weight-medium">
-                                                    <a
-                                                        href="{{ url('student/university') }}/{{ $data->slug }}">{{ $data->name }}</a>
-                                                </div>
-                                                <div class="text-muted">
-                                                    Country: {{ $data->country->name }} </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        @empty
+    <div class="col-sm-6 col-xl-4 mb-3">
+        <div class="card card-sm d-flex align-items-center justify-content-center text-center" style="height: 150px">
+            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                <div class="mb-2">
+                    <img src="{{ $data->getFirstMediaUrl('university_image') }}" style="width: 200px;" class="img-fluid" />
+                </div>
+                <div class="font-weight-medium">
+                    <a href="{{ url('student/university', $data->slug) }}">{{ $data->name }}</a>
+                </div>
+                <div class="text-muted">Country: {{ $data->country->name }}</div>
+            </div>
+        </div>
+    </div>
+@empty
                             <div>
                                 <img src="{{ url('assets/admin/img/no-data.png') }}" class="img-fluid d-block mx-auto"
                                     style="width: 200px" />
