@@ -127,7 +127,7 @@
                     </div>
 
                     <div class="row row-deck row-cards">
-                        <div class="col-lg-9">
+                        <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-header">
                                     <h3 class="card-title">My Applications</h3>
@@ -141,7 +141,7 @@
                                                 <th>Applied University</th>
                                                 <th>Applied Course</th>
                                                 <th>Program Level</th>
-                                                <th>Application Status</th>                                             
+                                                <th>Application Status</th>
                                                 <th>Document Status</th>
                                                 <th>Details</th>
                                             </tr>
@@ -161,25 +161,35 @@
                                                             class="text-danger">{{ $data->course->program_level }}</span>
                                                     </td>
                                                     <td>
-                                                        <span class="badge 
+                                                        <span
+                                                            class="badge 
                                                             {{ $data->application_status == 'pending' ? 'bg-danger' : '' }}
                                                             {{ $data->application_status == 'approved' ? 'bg-success' : '' }}">
                                                             {{ ucfirst($data->application_status) }}
                                                         </span>
                                                     </td>
                                                     <td>
-                                                        <span class="badge 
+                                                        <span
+                                                            class="badge 
                                                             {{ $data->document_status == 'pending' ? 'bg-danger' : '' }}
                                                             {{ $data->document_status == 'submitted' ? 'bg-primary' : '' }}
                                                             {{ $data->document_status == 'approved' ? 'bg-success' : '' }}">
                                                             {{ ucfirst($data->document_status) }}
                                                         </span>
                                                     </td>
-                                                    
-                                                    
+
+
                                                     <td data-label="Details" class="text-end">
-                                                        <button class="btn btn-primary btn-sm details"
-                                                            data-data="{&quot;id&quot;:4147,&quot;trnx&quot;:&quot;IMGNKNQWUMS2&quot;,&quot;user_id&quot;:&quot;51&quot;,&quot;user_type&quot;:&quot;1&quot;,&quot;currency_id&quot;:&quot;10&quot;,&quot;wallet_id&quot;:null,&quot;charge&quot;:&quot;171.6337000000&quot;,&quot;amount&quot;:&quot;6.0000000000&quot;,&quot;remark&quot;:&quot;money_exchange&quot;,&quot;type&quot;:&quot;-&quot;,&quot;details&quot;:&quot;Exchanged money from INR to BDT&quot;,&quot;invoice_num&quot;:null,&quot;created_at&quot;:&quot;2025-02-10T12:17:03.000000Z&quot;,&quot;updated_at&quot;:&quot;2025-02-10T12:17:03.000000Z&quot;,&quot;currency&quot;:{&quot;id&quot;:10,&quot;default&quot;:&quot;0&quot;,&quot;symbol&quot;:&quot;\u20b9&quot;,&quot;code&quot;:&quot;INR&quot;,&quot;curr_name&quot;:&quot;Indian Rupee&quot;,&quot;type&quot;:&quot;1&quot;,&quot;status&quot;:&quot;1&quot;,&quot;rate&quot;:&quot;85.7868500000&quot;,&quot;created_at&quot;:&quot;2022-01-25T19:28:23.000000Z&quot;,&quot;updated_at&quot;:&quot;2025-01-01T13:21:26.000000Z&quot;}}">Details</button>
+                                                        @if ($data->document_status == 'pending')
+                                                            <a href="{{ url('student/applications') }}/{{ $data->id }}"
+                                                                class="btn btn-primary btn-sm details">Upload
+                                                                Documents</a>
+                                                        @elseif (in_array($data->document_status, ['submitted', 'approved']))
+                                                            <a href="{{ url('student/applications') }}/{{ $data->id }}"
+                                                                class="btn btn-primary btn-sm details">View
+                                                                Documents</a>
+                                                        @endif
+
                                                     </td>
                                                 </tr>
                                             @empty
@@ -190,36 +200,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
-                            <div class="card wallet__card">
-                                <div class="card-header">
-                                    <h4>Login Activity</h4>
-                                </div>
-                                <div class="card-body card-body-scrollable card-body-scrollable-shadow">
-                                    <div class="divide-y">
-                                        <div>
-                                            <div class="row align-items-center">
-                                                <div class="col-auto">
-                                                    <span class="bg-blue text-white avatar">
-                                                        1 hr ago
-                                                    </span>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="font-weight-medium">
-                                                        Device: Mobile
-                                                    </div>
-                                                    <div class="text-muted">
-                                                        Browser: Chrome
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
 

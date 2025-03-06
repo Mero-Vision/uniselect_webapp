@@ -3,9 +3,14 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
-class Application extends BaseModel
+class Application extends BaseModel implements HasMedia
 {
+
+    use InteractsWithMedia;
+    
     public function university(){
         return $this->belongsTo(University::class,'university_id');
     }

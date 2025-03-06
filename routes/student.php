@@ -31,6 +31,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('courses/{slug}',[CourseController::class,'show']);
 
     Route::post('applications',[ApplicationController::class,'store']);
+    Route::get('applications/{id}',[ApplicationController::class,'edit']);
+    Route::post('applications',[ApplicationController::class,'uploadDocuments']);
+
+
 
 
 
