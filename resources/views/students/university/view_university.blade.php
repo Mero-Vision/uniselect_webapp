@@ -38,7 +38,7 @@
                     <div class="row mb-3">
 
                         <div class="col-12">
-                            <div class="card">
+                            <div class="card p-4">
                                 <div class="row align-items-center">
                                     <div class="col-12 col-sm-3 text-center text-sm-start">
                                         <img src="{{ $university->getFirstMediaUrl('university_image') }}"
