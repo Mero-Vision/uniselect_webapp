@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\Admin\ApplicationController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\DashboardController;
@@ -32,6 +32,8 @@ Route::middleware(['auth'])->group(function () {
     Route::post('courses/create-course', [CourseController::class, 'store']);
 
     Route::get('students', [StudentController::class, 'index']);
+    Route::get('student-applications', [ApplicationController::class, 'index']);
+
 
 
 

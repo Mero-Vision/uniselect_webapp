@@ -27,7 +27,7 @@
                     <ul>
                         <li class="{{ request()->is('admin/students') ? 'active' : '' }}"><a href="{{url('admin/students')}}"><i class="ti ti-user"></i><span>Student List
                                     </span></a></li>
-                        <li><a href=""><i class="ti ti-id-badge"></i><span>Student Applications</span></a></li>
+                        <li class="{{ request()->is('admin/student-applications') ? 'active' : '' }}"><a href="{{url('admin/student-applications')}}"><i class="ti ti-id-badge"></i><span>Student Applications</span></a></li>
                     </ul>
                 </li>
 
