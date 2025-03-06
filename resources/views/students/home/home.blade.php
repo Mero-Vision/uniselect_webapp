@@ -186,8 +186,21 @@
                                                                 Documents</a>
                                                         @elseif (in_array($data->document_status, ['submitted', 'approved']))
                                                             <a href="{{ url('student/applications') }}/{{ $data->id }}"
-                                                                class="btn btn-primary btn-sm details">View
-                                                                Documents</a>
+                                                                class="btn btn-primary btn-sm details"
+                                                                data-bs-toggle="modal" data-bs-target="#modal-success"
+                                                                data-university="{{ $data->university->name }}"
+                                                                data-course="{{ $data->course->name }}"
+                                                                data-program-level="{{ $data->course->program_level }}"
+                                                                data-application-status="{{ $data->application_status }}"
+                                                                data-document-status="{{ $data->document_status }}"
+                                                                data-passport="{{ $data->getFirstMediaUrl('passport') }}"
+                                                                data-offer-letter="{{ $data->getFirstMediaUrl('offer_letter') }}"
+                                                                data-transcript="{{ $data->getFirstMediaUrl('transcript_certificate') }}"
+                                                                data-language-test="{{ $data->getFirstMediaUrl('language_test_score') }}"
+                                                                data-bank-statement="{{ $data->getFirstMediaUrl('bank_statement') }}"
+                                                                data-tuition-fee="{{ $data->getFirstMediaUrl('tuition_fee_payment') }}">
+                                                                View Documents
+                                                            </a>
                                                         @endif
 
                                                     </td>
@@ -200,39 +213,131 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
 
-                <div class="modal modal-blur fade" id="modal-success" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog modal-md modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                aria-label="Close"></button>
-                            <div class="modal-status bg-primary"></div>
-                            <div class="modal-body text-center py-4">
-                                <i class="fas fa-info-circle fa-3x text-primary mb-2"></i>
-                                <h3>Transaction Details</h3>
-                                <p class="trx_details"></p>
-                                <ul class="list-group mt-2">
 
-                                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-blur fade" id="modal-success" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-status bg-primary"></div>
+                <div class="modal-body text-center py-4">
+                    <i class="fas fa-info-circle fa-3x text-primary mb-2"></i>
+                    <h3>Application Details</h3>
+                    <p class="application_details"></p>
+                    <ul class="list-group mt-2">
+                        <li class="list-group-item"><strong>University:</strong> <span class="university_name"></span>
+                        </li>
+                        <li class="list-group-item"><strong>Course:</strong> <span class="course_name"></span></li>
+                        <li class="list-group-item"><strong>Program Level:</strong> <span
+                                class="program_level"></span></li>
+                        <li class="list-group-item"><strong>Application Status:</strong> <span
+                                class="application_status"></span></li>
+                        <li class="list-group-item"><strong>Document Status:</strong> <span
+                                class="document_status"></span></li>
+                    </ul>
+
+                    <!-- Document Previews -->
+                    <div class="mt-4">
+                        <h5>Uploaded Documents</h5>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="form-label">Passport Image</div>
+                                <img id="modalPassportPreview" src="#" alt="Passport Image Preview"
+                                    style="width: 100%; display: none;" />
                             </div>
-                            <div class="modal-footer">
-                                <div class="w-100">
-                                    <div class="row">
-                                        <div class="col"><a href="#" class="btn w-100"
-                                                data-bs-dismiss="modal">
-                                                Close </a></div>
-                                    </div>
-                                </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="form-label">Offer Letter</div>
+                                <img id="modalOfferLetterPreview" src="#" alt="Offer Letter Preview"
+                                    style="width: 100%; display: none;" />
                             </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="form-label">Transcript Certificate</div>
+                                <img id="modalTranscriptPreview" src="#" alt="Transcript Certificate Preview"
+                                    style="width: 100%; display: none;" />
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="form-label">Language Test Score</div>
+                                <img id="modalLanguageTestPreview" src="#" alt="Language Test Score Preview"
+                                    style="width: 100%; display: none;" />
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="form-label">Bank Statement</div>
+                                <img id="modalBankStatementPreview" src="#" alt="Bank Statement Preview"
+                                    style="width: 100%; display: none;" />
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="form-label">Tuition Fee Payment</div>
+                                <img id="modalTuitionFeePreview" src="#" alt="Tuition Fee Payment Preview"
+                                    style="width: 100%; display: none;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="w-100">
+                        <div class="row">
+                            <div class="col"><a href="#" class="btn w-100"
+                                    data-bs-dismiss="modal">Close</a></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var modal = document.getElementById('modal-success');
+            modal.addEventListener('show.bs.modal', function(event) {
+                var button = event.relatedTarget; // Button that triggered the modal
+                var university = button.getAttribute('data-university');
+                var course = button.getAttribute('data-course');
+                var programLevel = button.getAttribute('data-program-level');
+                var applicationStatus = button.getAttribute('data-application-status');
+                var documentStatus = button.getAttribute('data-document-status');
+
+                // Media URLs
+                var passport = button.getAttribute('data-passport');
+                var offerLetter = button.getAttribute('data-offer-letter');
+                var transcript = button.getAttribute('data-transcript');
+                var languageTest = button.getAttribute('data-language-test');
+                var bankStatement = button.getAttribute('data-bank-statement');
+                var tuitionFee = button.getAttribute('data-tuition-fee');
+
+                // Update modal content
+                modal.querySelector('.university_name').textContent = university;
+                modal.querySelector('.course_name').textContent = course;
+                modal.querySelector('.program_level').textContent = programLevel;
+                modal.querySelector('.application_status').textContent = applicationStatus;
+                modal.querySelector('.document_status').textContent = documentStatus;
+
+                // Update media previews
+                updateMediaPreview('modalPassportPreview', passport);
+                updateMediaPreview('modalOfferLetterPreview', offerLetter);
+                updateMediaPreview('modalTranscriptPreview', transcript);
+                updateMediaPreview('modalLanguageTestPreview', languageTest);
+                updateMediaPreview('modalBankStatementPreview', bankStatement);
+                updateMediaPreview('modalTuitionFeePreview', tuitionFee);
+            });
+
+            function updateMediaPreview(elementId, mediaUrl) {
+                var element = document.getElementById(elementId);
+                if (mediaUrl) {
+                    element.src = mediaUrl;
+                    element.style.display = 'block';
+                } else {
+                    element.style.display = 'none';
+                }
+            }
+        });
+    </script>
 
 
     <script src="{{ url('assets/students/js/jquery.min.js') }}"></script>
@@ -241,77 +346,7 @@
     <script src="{{ url('assets/students/js/demo.min.js') }}"></script>
 
 
-    <script>
-        'use strict';
-        $('.reason').on('click', function() {
-            $('#modal-reason').find('.reason-text').val($(this).data('reason'))
-            $('#modal-reason').modal('show')
-        })
 
-        var theme = localStorage.getItem("tablerTheme");
-        var element = $(document).find('.page-title');
-        if (theme == 'dark') {
-            element.css('color', 'white');
-            $(document).find('.kyc__text').removeClass('text-dark').addClass('text-light')
-            $(document).find('.file-type').css('color', '#67737e')
-            $(document).find('.language-bar').css('color', '#f7fafd')
-            $(document).find('td').addClass('res')
-        } else {
-            element.css('color', 'black');
-        }
-    </script>
-
-    <script src="https://product.geniusocean.com/genius-wallet/assets/admin/js/sweetalert2@9.js"></script>
-
-
-
-
-
-
-    <script>
-        function toast(type, msg) {
-            const Toast = Swal.mixin({
-                toast: true,
-                position: 'top-end',
-                showConfirmButton: false,
-                timer: 3000,
-                timerProgressBar: true,
-                onOpen: (toast) => {
-                    toast.addEventListener('mouseenter', Swal.stopTimer)
-                    toast.addEventListener('mouseleave', Swal.resumeTimer)
-                }
-            })
-            Toast.fire({
-                icon: type,
-                title: msg
-            })
-        }
-
-        function amount(amount, type) {
-            if (type == 2) {
-                return amount.toFixed(8);
-            } else {
-                return amount.toFixed();
-            }
-        }
-    </script>
-    <script>
-        'use strict';
-
-        $('.details').on('click', function() {
-            var url = "https://product.geniusocean.com/genius-wallet/user/transaction/details" + '/' + $(this).data(
-                'data').id
-            $('.trx_details').text($(this).data('data').details)
-            $.get(url, function(res) {
-                if (res == 'empty') {
-                    $('.list-group').html('<p>No details found!</p>')
-                } else {
-                    $('.list-group').html(res)
-                }
-                $('#modal-success').modal('show')
-            })
-        })
-    </script>
 
 </body>
 
