@@ -10,4 +10,5 @@
 <link rel="stylesheet" href="{{ url('assets/admin/css/bootstrap-datetimepicker.min.css')}}">
 <link rel="stylesheet" href="{{ url('assets/admin/css/owl.carousel.min.css') }}">
 <link rel="stylesheet" href="{{ url('assets/admin/css/owl.theme.default.min.css') }}">
+<link rel="stylesheet" href="{{ url('assets/admin/css/dataTables.bootstrap5.min.css')}}">
 <link rel="stylesheet" href="{{ url('assets/admin/css/style.css') }}">

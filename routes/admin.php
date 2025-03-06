@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SiteSettingController;
+use App\Http\Controllers\Admin\StudentController;
 use App\Http\Controllers\Admin\UniversityController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,6 +30,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('courses', [CourseController::class, 'index']);
     Route::get('courses/create-course', [CourseController::class, 'create']);
     Route::post('courses/create-course', [CourseController::class, 'store']);
+
+    Route::get('students', [StudentController::class, 'index']);
 
 
 

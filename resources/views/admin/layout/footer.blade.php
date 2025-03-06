@@ -11,4 +11,6 @@
 <script src="{{url('assets/admin/js/select2.min.js')}}"></script>
 <script src="{{ url('assets/admin/js/jquery.counterup.min.js') }}"></script>
 <script src="{{ url('assets/admin/js/jquery.waypoints.min.js') }}"></script>
+<script src="{{ url('assets/admin/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{ url('assets/admin/js/dataTables.bootstrap5.min.js')}}"></script>
 <script src="{{ url('assets/admin/js/script.js') }}"></script>

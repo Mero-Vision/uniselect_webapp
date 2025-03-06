@@ -77,53 +77,8 @@
                             <input type="text" class="form-control date-range bookingrange" placeholder="Select"
                                 value="Academic Year : 2024 / 2025">
                         </div>
-                        <div class="dropdown mb-3 me-2">
-                            <a href="javascript:void(0);" class="btn btn-outline-light bg-white dropdown-toggle"
-                                data-bs-toggle="dropdown" data-bs-auto-close="outside"><i
-                                    class="ti ti-filter me-2"></i>Filter</a>
-                            <div class="dropdown-menu drop-width">
-                                <form action="guardians.html">
-                                    <div class="d-flex align-items-center border-bottom p-3">
-                                        <h4>Filter</h4>
-                                    </div>
-                                    <div class="p-3 pb-0 border-bottom">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="mb-3">
-                                                    <label class="form-label">Name</label>
-                                                    <select class="select">
-                                                        <option>Select</option>
-                                                        <option>William</option>
-                                                        <option>Stacey</option>
-                                                        <option>George</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="mb-3">
-                                                    <label class="form-label">Class</label>
-                                                    <select class="select">
-                                                        <option>Select</option>
-                                                        <option>III A</option>
-                                                        <option>II (A)</option>
-                                                        <option>VI (A)</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="p-3 d-flex align-items-center justify-content-end">
-                                        <a href="#" class="btn btn-light me-3">Reset</a>
-                                        <button type="submit" class="btn btn-primary">Apply</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center bg-white border rounded-2 p-1 mb-3 me-2">
-
-                            <a href="teacher-grid.html" class=" active btn btn-icon btn-sm  primary-hover"><i
-                                    class="ti ti-grid-dots"></i></a>
-                        </div>
+                        
+                        
                         <div class="dropdown mb-3">
                             <a href="javascript:void(0);" class="btn btn-outline-light bg-white dropdown-toggle"
                                 data-bs-toggle="dropdown"><i class="ti ti-sort-ascending-2 me-2"></i>Sort by A-Z </a>
@@ -169,7 +124,7 @@
                                             </a>
                                             <ul class="dropdown-menu dropdown-menu-right p-3">
                                                 <li>
-                                                    <a class="dropdown-item rounded-1" href="edit-teacher.html"><i
+                                                    <a class="dropdown-item rounded-1" href=""><i
                                                             class="ti ti-edit-circle me-2"></i>Edit</a>
                                                 </li>
                                                 <li>

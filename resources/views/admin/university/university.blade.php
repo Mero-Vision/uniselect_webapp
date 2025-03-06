@@ -122,7 +122,7 @@
                                             </a>
                                             <ul class="dropdown-menu dropdown-menu-right p-3">
                                                 <li>
-                                                    <a class="dropdown-item rounded-1" href="edit-teacher.html"><i
+                                                    <a class="dropdown-item rounded-1" href=""><i
                                                             class="ti ti-edit-circle me-2"></i>Edit</a>
                                                 </li>
                                                 <li>
