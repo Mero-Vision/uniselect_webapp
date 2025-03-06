@@ -46,8 +46,8 @@
                     </div>
                     <div class="d-flex my-xl-auto right-content align-items-center flex-wrap">
                         <div class="mb-2">
-                            <a href="" class="btn btn-primary d-flex align-items-center me-3"><i
-                                    class="ti ti-square-rounded-plus me-2"></i>Add New Student</a>
+                            <a href="{{url('admin/university/create-university')}}" class="btn btn-primary d-flex align-items-center me-3"><i
+                                    class="ti ti-square-rounded-plus me-2"></i>Add New University</a>
                         </div>
                     </div>
                 </div>
@@ -58,12 +58,21 @@
                         <div class="alert-message">
                             <div class="alert alert-success rounded-pill d-flex align-items-center justify-content-between border-success mb-4"
                                 role="alert">
-                                <div class="d-flex align-items-center">
-                                    <span class="me-1 avatar avatar-sm flex-shrink-0"><img
-                                            src="{{ Avatar::create(auth()->user()->name)->toBase64() }}" alt="Img"
-                                            class="img-fluid rounded-circle"></span>
-                                    <p> {{Auth::user()->name}}, C has paid Fees for the <strong class="mx-1">“Term1”</strong></p>
-                                </div>
+                                @if ($newApplications->isNotEmpty())
+                                    <div class="d-flex align-items-center">
+                                        <span class="me-1 avatar avatar-sm flex-shrink-0">
+                                            <img src="{{ Avatar::create(auth()->user()->name)->toBase64() }}"
+                                                alt="Img" class="img-fluid rounded-circle">
+                                        </span>
+                                        <p> {{ Auth::user()->name }}, New Student Application Are Uploaded <strong
+                                                class="mx-1">Please Check It</strong></p>
+                                    </div>
+                                @else
+                                    <div class="d-flex align-items-center">
+                                        <p class="text-center text-muted">You have no new notifications at this time.
+                                        </p>
+                                    </div>
+                                @endif
                                 <button type="button" class="btn-close p-0" data-bs-dismiss="alert"
                                     aria-label="Close"><span><i class="ti ti-x"></i></span></button>
                             </div>
@@ -82,20 +91,20 @@
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="avatar avatar-xl bg-danger-transparent me-2 p-1">
-                                        <img src="{{url('assets/admin/img/student.svg')}}" alt="img">
+                                        <img src="{{ url('assets/admin/img/student.svg') }}" alt="img">
                                     </div>
                                     <div class="overflow-hidden flex-fill">
                                         <div class="d-flex align-items-center justify-content-between">
-                                            <h2 class="counter">3654</h2>
-                                            <span class="badge bg-danger">1.2%</span>
+                                            <h2 class="counter">{{$totalStudents}}</h2>
+                                            <span class="badge bg-danger">{{$studentsPercentageChange}}%</span>
                                         </div>
                                         <p>Total Students</p>
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center justify-content-between border-top mt-3 pt-3">
-                                    <p class="mb-0">Active : <span class="text-dark fw-semibold">3643</span></p>
+                                    <p class="mb-0">Active : <span class="text-dark fw-semibold">{{$totalStudents}}</span></p>
                                     <span class="text-light">|</span>
-                                    <p>Inactive : <span class="text-dark fw-semibold">11</span></p>
+                                    <p>Inactive : <span class="text-dark fw-semibold">0</span></p>
                                 </div>
                             </div>
                         </div>
@@ -108,20 +117,20 @@
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="avatar avatar-xl me-2 bg-secondary-transparent p-1">
-                                        <img src="{{url('assets/admin/img/university.svg')}}" alt="img">
+                                        <img src="{{ url('assets/admin/img/university.svg') }}" alt="img">
                                     </div>
                                     <div class="overflow-hidden flex-fill">
                                         <div class="d-flex align-items-center justify-content-between">
-                                            <h2 class="counter">284</h2>
-                                            <span class="badge bg-skyblue">1.2%</span>
+                                            <h2 class="counter">{{$totalUniversity}}</h2>
+                                            <span class="badge bg-skyblue">{{$universityPercentageChange}}%</span>
                                         </div>
                                         <p>Total University</p>
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center justify-content-between border-top mt-3 pt-3">
-                                    <p class="mb-0">Active : <span class="text-dark fw-semibold">254</span></p>
+                                    <p class="mb-0">Active : <span class="text-dark fw-semibold">{{$totalUniversity}}</span></p>
                                     <span class="text-light">|</span>
-                                    <p>Inactive : <span class="text-dark fw-semibold">30</span></p>
+                                    <p>Inactive : <span class="text-dark fw-semibold">0</span></p>
                                 </div>
                             </div>
                         </div>
@@ -134,20 +143,20 @@
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="avatar avatar-xl me-2 bg-warning-transparent p-1">
-                                        <img src="{{url('assets/admin/img/course.svg')}}" alt="img">
+                                        <img src="{{ url('assets/admin/img/course.svg') }}" alt="img">
                                     </div>
                                     <div class="overflow-hidden flex-fill">
                                         <div class="d-flex align-items-center justify-content-between">
-                                            <h2 class="counter">162</h2>
-                                            <span class="badge bg-warning">1.2%</span>
+                                            <h2 class="counter">{{$totalCourses}}</h2>
+                                            <span class="badge bg-warning">{{$coursesPercentageChange}}%</span>
                                         </div>
                                         <p>Total Courses</p>
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center justify-content-between border-top mt-3 pt-3">
-                                    <p class="mb-0">Active : <span class="text-dark fw-semibold">161</span></p>
+                                    <p class="mb-0">Active : <span class="text-dark fw-semibold">{{$totalCourses}}</span></p>
                                     <span class="text-light">|</span>
-                                    <p>Inactive : <span class="text-dark fw-semibold">02</span></p>
+                                    <p>Inactive : <span class="text-dark fw-semibold">0</span></p>
                                 </div>
                             </div>
                         </div>
@@ -160,20 +169,20 @@
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="avatar avatar-xl me-2 bg-success-transparent p-1">
-                                        <img src="{{url('assets/admin/img/application.svg')}}" alt="img">
+                                        <img src="{{ url('assets/admin/img/application.svg') }}" alt="img">
                                     </div>
                                     <div class="overflow-hidden flex-fill">
                                         <div class="d-flex align-items-center justify-content-between">
-                                            <h2 class="counter">82</h2>
-                                            <span class="badge bg-success">1.2%</span>
+                                            <h2 class="counter">{{$totalApplications}}</h2>
+                                            <span class="badge bg-success">{{$applicationsPercentageChange}}%</span>
                                         </div>
                                         <p>Total Applications</p>
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center justify-content-between border-top mt-3 pt-3">
-                                    <p class="mb-0">Active : <span class="text-dark fw-semibold">81</span></p>
+                                    <p class="mb-0">Active : <span class="text-dark fw-semibold">{{$totalApplications}}</span></p>
                                     <span class="text-light">|</span>
-                                    <p>Inactive : <span class="text-dark fw-semibold">01</span></p>
+                                    <p>Inactive : <span class="text-dark fw-semibold">0</span></p>
                                 </div>
                             </div>
                         </div>
@@ -276,7 +285,7 @@
 
                 </div>
 
-                
+
 
 
 
@@ -289,9 +298,9 @@
         </div>
         <!-- /Page Wrapper -->
 
-     
 
-      
+
+
 
     </div>
     <!-- /Main Wrapper -->
