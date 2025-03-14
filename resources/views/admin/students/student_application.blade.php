@@ -109,7 +109,7 @@
                                                     {{ ucfirst($data->document_status) }}
                                                 </span>
                                             </td>
-                                            <td><a class="badge bg-success text-light">View</a></td>
+                                            <td><a href="{{url('admin/student-applications/')}}/{{$data->id}}" class="badge bg-success text-light">View</a></td>
 
                                         </tr>
                                     @endforeach

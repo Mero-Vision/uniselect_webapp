@@ -33,6 +33,8 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('students', [StudentController::class, 'index']);
     Route::get('student-applications', [ApplicationController::class, 'index']);
+    Route::get('student-applications/{id}', [ApplicationController::class, 'show']);
+
 
 
 
