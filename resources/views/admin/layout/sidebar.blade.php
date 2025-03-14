@@ -75,7 +75,6 @@
                     <ul>
                         <li><a href=""><i class="ti ti-message"></i><span>Contact
                                     Messages</span></a></li>
-                        <li><a href=""><i class="ti ti-ticket"></i><span>Tickets</span></a></li>
                     </ul>
                 </li>
 

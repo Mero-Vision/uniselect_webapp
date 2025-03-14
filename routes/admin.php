@@ -35,6 +35,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('student-applications', [ApplicationController::class, 'index']);
     Route::get('student-applications/{id}', [ApplicationController::class, 'show']);
 
+    Route::get('student-applications/update-status/{id}', [ApplicationController::class, 'updateStatus']);
+
+
 
 
 
