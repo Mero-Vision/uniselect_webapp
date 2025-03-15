@@ -34,7 +34,7 @@
                         <a href="{{ url('student/test-scores') }}" class="dropdown-item">Test Score</a>
                     <a href="{{ url('service-center') }}" class="dropdown-item">Service Center</a>
 
-                    <a href="" class="dropdown-item">Contact Us</a>
+                   
                     <div class="dropdown-divider"></div>
                     <a href="{{ url('student/logout') }}" class="dropdown-item">Logout</a>
                 </div>

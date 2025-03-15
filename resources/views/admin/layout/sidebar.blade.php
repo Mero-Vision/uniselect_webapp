@@ -70,13 +70,13 @@
 
 
 
-                <li>
+                {{-- <li>
                     <h6 class="submenu-hdr"><span>Support</span></h6>
                     <ul>
                         <li><a href=""><i class="ti ti-message"></i><span>Contact
                                     Messages</span></a></li>
                     </ul>
-                </li>
+                </li> --}}
 
                 <li>
                     <h6 class="submenu-hdr"><span>Settings</span></h6>
