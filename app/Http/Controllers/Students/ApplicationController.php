@@ -28,7 +28,8 @@ class ApplicationController extends Controller
         ]);
         
         if ($validator->fails()) {
-            sweetalert()->addWarning("Validation Error', 'Please fill all required fields!");
+            $errors = $validator->errors()->all();
+            sweetalert()->addWarning('Validation Error', implode('<br>', $errors));
             return back();
         }
         try {
