@@ -22,34 +22,35 @@ class ApplicationController extends Controller
 
     public function store(Request $request)
     {
+       
         $validator = Validator::make($request->all(), [
             'university_id' => ['required'],
             'course_id' => ['required']
         ]);
-        
+
+       
         if ($validator->fails()) {
             $errors = $validator->errors()->all();
             sweetalert()->addWarning('Validation Error', implode('<br>', $errors));
-            return back();
+            return back()->withInput(); 
         }
+
         try {
 
             $application = DB::transaction(function () use ($request) {
-                $application = Application::create([
+                return Application::create([
                     'student_id' => Auth::user()->id,
                     'university_id' => $request->university_id,
                     'course_id' => $request->course_id,
                 ]);
-
-                return $application;
             });
             if ($application) {
-                sweetalert()->addSuccess("Application Created Successfully!");
-                return back();
+                sweetalert()->addSuccess('Application Created Successfully!');
+                return redirect()->back(); 
             }
         } catch (\Exception $e) {
-            sweetalert()->addError($e->getMessage());
-            return back();
+            sweetalert()->addError('An error occurred while creating the application. Please try again.');
+            return back()->withInput();
         }
     }
 
@@ -69,7 +70,7 @@ class ApplicationController extends Controller
 
         try {
             DB::transaction(function () use ($request, $application) {
-                
+
                 $this->handleMediaUpload($request, $application, self::PASSPORT_COLLECTION, 'passport');
                 $this->handleMediaUpload($request, $application, self::OFFER_LETTER_COLLECTION, 'offer_letter');
                 $this->handleMediaUpload($request, $application, self::TRANSCRIPT_CERTIFICATE_COLLECTION, 'transcript_certificate');
@@ -77,7 +78,7 @@ class ApplicationController extends Controller
                 $this->handleMediaUpload($request, $application, self::BANK_STATEMENT_COLLECTION, 'bank_statement');
                 $this->handleMediaUpload($request, $application, self::TUITION_FEE_PAYMENT_COLLECTION, 'tuition_fee_payment');
                 $application->update([
-                    'document_status'=>'submitted'
+                    'document_status' => 'submitted'
                 ]);
             });
 

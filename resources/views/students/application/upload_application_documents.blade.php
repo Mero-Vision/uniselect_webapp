@@ -22,7 +22,7 @@
                             <div class="card">
                                 <h3 class="text-center p-2">Upload Application Documents</h3>
                                 <div class="card-body">
-                                    <form action="{{ url('student/applications') }}" id="form" method="POST"
+                                    <form action="{{ url('student/upload-documents') }}" id="form" method="POST"
                                         enctype="multipart/form-data">
                                         @csrf
                                         <input type="hidden" value="{{$application->id}}" name="application_id"/>

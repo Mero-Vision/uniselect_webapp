@@ -32,7 +32,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::post('applications',[ApplicationController::class,'store']);
     Route::get('applications/{id}',[ApplicationController::class,'edit']);
-    Route::post('applications',[ApplicationController::class,'uploadDocuments']);
+    Route::post('upload-documents',[ApplicationController::class,'uploadDocuments']);
 
 
 

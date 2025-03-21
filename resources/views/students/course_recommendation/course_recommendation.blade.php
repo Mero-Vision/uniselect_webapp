@@ -112,7 +112,7 @@
                                                     @if (in_array($data->id, $appliedCourses))
                                                         <button class="btn btn-success btn-sm" disabled>Applied</button>
                                                     @else
-                                                        <form action="{{ url('student/applications') }}" method="POST">
+                                                        <form action="{{url('student/applications')}}" method="POST">
                                                             @csrf
                                                             <input type="hidden" value="{{ $data->university_id }}"
                                                                 name="university_id" />
