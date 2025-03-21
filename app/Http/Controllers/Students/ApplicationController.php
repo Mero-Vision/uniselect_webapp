@@ -8,6 +8,7 @@ use App\Models\Application;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
 
 class ApplicationController extends Controller
 {
@@ -21,10 +22,15 @@ class ApplicationController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
+        $validator = Validator::make($request->all(), [
             'university_id' => ['required'],
             'course_id' => ['required']
         ]);
+        
+        if ($validator->fails()) {
+            sweetalert()->addWarning("Validation Error', 'Please fill all required fields!");
+            return back();
+        }
         try {
 
             $application = DB::transaction(function () use ($request) {
