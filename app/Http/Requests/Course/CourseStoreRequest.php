@@ -39,25 +39,25 @@ class CourseStoreRequest extends FormRequest
             'min_ielts_overall' => 'nullable|numeric|min:0|max:10',
 
             // PTE Scores
-            'min_pte_reading' => 'nullable|integer|min:0|max:10',
-            'min_pte_writing' => 'nullable|integer|min:0|max:10',
-            'min_pte_listening' => 'nullable|integer|min:0|max:10',
-            'min_pte_speaking' => 'nullable|integer|min:0|max:10',
-            'min_pte_overall' => 'nullable|integer|min:0|max:10',
+            'min_pte_reading' => 'nullable|integer|min:0|max:100',
+            'min_pte_writing' => 'nullable|integer|min:0|max:100',
+            'min_pte_listening' => 'nullable|integer|min:0|max:100',
+            'min_pte_speaking' => 'nullable|integer|min:0|max:100',
+            'min_pte_overall' => 'nullable|integer|min:0|max:100',
 
             // SAT Scores
-            'min_sat_reading' => 'nullable|integer|min:0|max:10',
-            'min_sat_writing' => 'nullable|integer|min:0|max:10',
-            'min_sat_listening' => 'nullable|integer|min:0|max:10',
-            'min_sat_speaking' => 'nullable|integer|min:0|max:10',
-            'min_sat_overall' => 'nullable|integer|min:0|max:10',
+            'min_sat_reading' => 'nullable|integer|min:0|max:100',
+            'min_sat_writing' => 'nullable|integer|min:0|max:100',
+            'min_sat_listening' => 'nullable|integer|min:0|max:100',
+            'min_sat_speaking' => 'nullable|integer|min:0|max:100',
+            'min_sat_overall' => 'nullable|integer|min:0|max:100',
 
             // TOEFL Scores
-            'min_toefl_reading' => 'nullable|integer|min:0|max:10',
-            'min_toefl_writing' => 'nullable|integer|min:0|max:10',
-            'min_toefl_listening' => 'nullable|integer|min:0|max:10',
-            'min_toefl_speaking' => 'nullable|integer|min:0|max:10',
-            'min_toefl_overall' => 'nullable|integer|min:0|max:10',
+            'min_toefl_reading' => 'nullable|integer|min:0|max:100',
+            'min_toefl_writing' => 'nullable|integer|min:0|max:100',
+            'min_toefl_listening' => 'nullable|integer|min:0|max:100',
+            'min_toefl_speaking' => 'nullable|integer|min:0|max:100',
+            'min_toefl_overall' => 'nullable|integer|min:0|max:100',
         ];
     }
 }
