@@ -33,12 +33,12 @@ class AuthController extends Controller
 
                 if ($this->authService->checkUserRole($user, User::ADMIN)) {
                     return redirect()->intended('admin/dashboard')
-                        ->with('success', 'Welcome back, Administrator!');
+                        ->with('success', 'Welcome back!');
                 }
 
                 if ($this->authService->checkUserRole($user, User::STUDENT)) {
                     return redirect()->intended('student/home')
-                        ->with('success', 'Welcome back, Administrator!');
+                        ->with('success', 'Welcome back!');
                 }
 
                 return redirect()->intended('dashboard')
